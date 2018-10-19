@@ -1,0 +1,85 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Test event generation for a fall-detection IoT system.aux
+The style file: elsarticle-num.bst
+Database file #1: references.bib
+<<<<<<< HEAD
+=======
+Repeated entry---line 619 of file references.bib
+ : @misc{iot-analytics:2015
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 626 of file references.bib
+ : @article{dobbs2004houches
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 633 of file references.bib
+ : @article{mangano2005tools
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 643 of file references.bib
+ : @misc{WebLogic:2016
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 650 of file references.bib
+ : @misc{Finland:2016
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 657 of file references.bib
+ : @misc{Starcom:2016
+ :                   ,
+I'm skipping whatever remains of this entry
+>>>>>>> 50962420b8c19f4bbe6761dfdd274189f04e4d2f
+Warning--empty journal in Grzegorczyk
+Warning--empty publisher in colladoTriaxal
+Warning--empty booktitle in Kozina
+Warning--empty publisher in Kozina
+Warning--empty year in Kozina
+Warning--empty journal in Luder2009
+Warning--empty journal in colladomachine
+You've used 33 entries,
+            2937 wiz_defined-function locations,
+            877 strings with 11770 characters,
+and the built_in function-call counts, 8442 in all, are:
+= -- 759
+> -- 284
+< -- 8
++ -- 116
+- -- 83
+* -- 447
+:= -- 1125
+add.period$ -- 39
+call.type$ -- 33
+change.case$ -- 33
+chr.to.int$ -- 6
+cite$ -- 40
+duplicate$ -- 281
+empty$ -- 1017
+format.name$ -- 102
+if$ -- 2271
+int.to.chr$ -- 0
+int.to.str$ -- 33
+missing$ -- 24
+newline$ -- 113
+num.names$ -- 33
+pop$ -- 260
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 649
+stack$ -- 0
+substring$ -- 237
+swap$ -- 67
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 7
+while$ -- 55
+width$ -- 35
+write$ -- 278
+<<<<<<< HEAD
+(There were 7 warnings)
+=======
+(There were 6 error messages)
+>>>>>>> 50962420b8c19f4bbe6761dfdd274189f04e4d2f

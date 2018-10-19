@@ -1,0 +1,83 @@
+\documentclass[parskip]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+ 
+\begin{document}
+ 
+\pagestyle{empty}
+
+\begin{flushright}
+    \Large
+    13th of April 2016
+\end{flushright}
+
+\begin{center}
+    \huge
+    Cover Letter\\
+    \vspace{0.4cm}
+    \LARGE
+    Test event generation for a fall-detection IoT system\\
+    \vspace{0.4cm}
+    \large
+    Lorena Gutiérrez-Madroñal, Luigi La Blunda, Matthias F. Wagner, Inmaculada Medina Bulo
+\end{center}
+ 
+    \vspace{0.8cm}
+
+    \normalsize
+Dear Editor,
+
+all authors have checked this manuscript and have agreed to submit it to Journal of Biomedical Informatics, to be considered for publication.
+This manuscript is the authors' original work and has not been published, nor has it been submitted simultaneously elsewhere.
+
+The main contributions of this paper are:
+the presentation of a new functionality of the tool IoT-EG \textit{(Internet of Things - Event Generator)}. IoT-TEG automatically 
+generates a wide variety of events for the testing phases of any event-processing program. We have checked that the majority of IoT 
+critical situations that want to be detected follow a specific pattern. The new IoT-TEG functionality allows to simulate the behaviour of 
+different event attributes in order to generate test events following a specific pattern. One of that IoT critical situations 
+to detect are the falls. We introduce an analysis of the major parameter involved in a fall, the acceleration. The acceleration can 
+measure the movement of the body, so its behaviour is analysed in two types of falls. The used IoT system which detect the falls has
+been improved, its hardware evolution as well as the obtained data is described and analysed. Finally, in order to detect the 
+studied falls, event patterns of both fall types are defined.
+
+We are convinced that the presented results are important contributions for researchers and practitioners.
+Internet of Things (IoT) gained more and more attention recently, the IoT systems have to handle a huge amount 
+of information which arrives as events. These events need to be processed in real time
+to make correct decisions. We find strongly necessary to test the IoT systems which will process that information. 
+To test IoT systems, and its functionalities, it is necessary to use a large amount 
+of events with specific structures and values. The automatic event generation to test IoT systems had not yet been 
+considered. Our IoT-EG system helps to automatically generate events in order to obtain a 
+solid and reliable IoT system.
+
+
+according to the improvements of the fall detection prototype. The main contributions of this paper are:
+
+\begin{itemize}
+ \item \textbf{A new functionality of the IoT-TEG system} which allows to simulate the behaviour of 
+ different event attributes in order to generate test events following a specific pattern.
+ \item \textbf{An analysis of the major parameter in a fall}: while a person is falling, the acceleration 
+ is the parameter that can measure the movement of the body. This parameter is analysed in order to know 
+ its behaviour during two types of falls.
+ \item \textbf{A study of the fall detection prototype evolution}: the system which is been used is
+ continuously being improved. We describe the evolution of its architecture, how the data is analysed and 
+ the detected problems.
+ \item \textbf{New definitions of two types of falls}: after the analysis of the acceleration during two 
+ types of falls a new definition for each one has been done. The obtained data of the fall detection 
+ prototype is used to define EPL of EsperTech patterns to detect those type of falls. 
+\end{itemize}
+
+
+Thank you so much for receiving our manuscript and considering it for review.
+We highly appreciate your time and look forward to your response.
+
+Kind regards,
+
+Lorena, Luigi, Matthias, and Inmaculada.
+
+
+
+\end{document}
+
+
+

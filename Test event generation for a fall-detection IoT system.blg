@@ -4,51 +4,51 @@ The top-level auxiliary file: Test event generation for a fall-detection IoT sys
 The style file: elsarticle-num.bst
 Database file #1: references.bib
 Warning--empty journal in Grzegorczyk
-Warning--empty publisher in colladoTriaxal
 Warning--empty booktitle in Kozina
 Warning--empty publisher in Kozina
 Warning--empty year in Kozina
 Warning--empty journal in Luder2009
 Warning--empty journal in colladomachine
-You've used 33 entries,
+Warning--empty publisher in colladoTriaxal
+You've used 31 entries,
             2937 wiz_defined-function locations,
-            877 strings with 11770 characters,
-and the built_in function-call counts, 8442 in all, are:
-= -- 759
-> -- 284
+            866 strings with 11511 characters,
+and the built_in function-call counts, 8064 in all, are:
+= -- 725
+> -- 270
 < -- 8
-+ -- 116
-- -- 83
-* -- 447
-:= -- 1125
-add.period$ -- 39
-call.type$ -- 33
-change.case$ -- 33
++ -- 110
+- -- 79
+* -- 443
+:= -- 1072
+add.period$ -- 37
+call.type$ -- 31
+change.case$ -- 30
 chr.to.int$ -- 6
-cite$ -- 40
-duplicate$ -- 281
-empty$ -- 1017
-format.name$ -- 102
-if$ -- 2271
+cite$ -- 38
+duplicate$ -- 268
+empty$ -- 971
+format.name$ -- 97
+if$ -- 2166
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 24
-newline$ -- 113
-num.names$ -- 33
-pop$ -- 260
+int.to.str$ -- 31
+missing$ -- 23
+newline$ -- 108
+num.names$ -- 31
+pop$ -- 246
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 649
+skip$ -- 614
 stack$ -- 0
-substring$ -- 237
-swap$ -- 67
+substring$ -- 229
+swap$ -- 68
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 7
-while$ -- 55
-width$ -- 35
-write$ -- 278
+while$ -- 52
+width$ -- 33
+write$ -- 264
 (There were 7 warnings)

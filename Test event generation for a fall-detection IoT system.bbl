@@ -87,22 +87,6 @@ Starcom\_Systems, The event generator, \url{https://www.starcomsystems.com}
 Oracle, Introducing the weblogic integration administration console,
   \url{https://docs.oracle.com} (2016).
 
-\bibitem{EuropeanCommission2013}
-{European Commission}, New device vigi'fall will make growing older safer
-  thanks to eu funding - horizon 2020 - european commission,
-  \url{https://goo.gl/6jLwsp} (2013).
-
-\bibitem{Igual2013}
-R.~Igual, C.~Medrano, I.~Plaza, Challenges, issues and trends in fall detection
-  systems, Biomedical engineering online 12 (2013) 66.
-\newblock \href {http://dx.doi.org/10.1186/1475-925X-12-66}
-  {\path{doi:10.1186/1475-925X-12-66}}.
-
-\bibitem{colladoTriaxal}
-A.~Collado~Villaverde, M.~R-Moreno, D.~Barrero, D.~Rodriguez, Triaxial
-  Accelerometer Located on the Wrist for Elderly People’s Fall Detection,
-  2016.
-
 \bibitem{Li2009}
 Q.~Li, J.~A. Stankovic, M.~A. Hanson, A.~T. Barth, J.~Lach, G.~Zhou, Accurate,
   Fast Fall Detection Using Gyroscopes and Accelerometer-Derived Posture
@@ -138,8 +122,14 @@ O.~Etzion, P.~Niblett, Event Processing in Action, 1st Edition, Manning
 
 \bibitem{gutierrez2018}
 L.~Guti{\'e}rrez-Madro{\~n}al, A.~Garc{\'i}a-Dom{\'i}nguez, I.~Medina-Bulo,
-  Evolutionary mutation testing for iot with recorded and generated events,
-  Software: Practice and ExperienceAccepted, to be published.
+  \href{https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.2629}{Evolutionary
+  mutation testing for iot with recorded and generated events}, Software:
+  Practice and Experience 0~(0).
+\newblock \href
+  {http://arxiv.org/abs/https://onlinelibrary.wiley.com/doi/pdf/10.1002/spe.2629}
+  {\path{arXiv:https://onlinelibrary.wiley.com/doi/pdf/10.1002/spe.2629}},
+  \href {http://dx.doi.org/10.1002/spe.2629} {\path{doi:10.1002/spe.2629}}.
+\newline\urlprefix\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.2629}
 
 \bibitem{jia2011}
 Y.~Jia, M.~Harman, An analysis and survey of the development of mutation
@@ -166,6 +156,11 @@ L.~Gutiérrez-Madroñal, Github repository,
 \bibitem{colladomachine}
 A.~Collado-Villaverde, M.~D. R-Moreno, D.~F. Barrero, D.~Rodriguez, Machine
   learning approaches to detect elderly people falls using sound 10350.
+
+\bibitem{colladoTriaxal}
+A.~Collado~Villaverde, M.~R-Moreno, D.~Barrero, D.~Rodriguez, Triaxial
+  Accelerometer Located on the Wrist for Elderly People’s Fall Detection,
+  2016.
 
 \bibitem{Arduino2018}
 Arduino, Arduino website,

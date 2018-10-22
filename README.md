@@ -1,1 +1,1 @@
-# JBI
+# IoTJ paper

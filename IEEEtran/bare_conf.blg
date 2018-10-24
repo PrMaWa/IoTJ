@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: bare_conf.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: references.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in Grzegorczyk
+Warning--empty booktitle in Kozina
+Warning--empty year in Kozina
+Warning--empty journal in Luder2009
+Warning--empty journal in colladomachine
+Warning--missing publisher in colladoTriaxal
+
+Done.
+You've used 30 entries,
+            4087 wiz_defined-function locations,
+            1007 strings with 13237 characters,
+and the built_in function-call counts, 16708 in all, are:
+= -- 1298
+> -- 393
+< -- 88
++ -- 206
+- -- 84
+* -- 744
+:= -- 2650
+add.period$ -- 62
+call.type$ -- 30
+change.case$ -- 28
+chr.to.int$ -- 192
+cite$ -- 36
+duplicate$ -- 1292
+empty$ -- 1470
+format.name$ -- 96
+if$ -- 3831
+int.to.chr$ -- 0
+int.to.str$ -- 30
+missing$ -- 250
+newline$ -- 115
+num.names$ -- 30
+pop$ -- 646
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 1294
+stack$ -- 0
+substring$ -- 484
+swap$ -- 916
+text.length$ -- 24
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 30
+warning$ -- 6
+while$ -- 63
+width$ -- 32
+write$ -- 280
+(There were 6 warnings)

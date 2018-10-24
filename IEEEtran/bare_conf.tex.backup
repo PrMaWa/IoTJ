@@ -1,82 +1,402 @@
-\documentclass[review]{elsarticle}
 
+%% bare_conf.tex
+%% V1.4b
+%% 2015/08/26
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.8b or later) with an IEEE
+%% conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/pkg/ieeetran
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall the IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%*************************************************************************
+
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. The IEEE's font choices and paper sizes can   ***
+% *** trigger bugs that do not appear when using other class files.       ***                          ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+\documentclass[journal]{IEEEtran}
+% Some Computer Society conferences also require the compsoc mode option,
+% but others use the standard conference format.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
 \usepackage{lineno,hyperref}
 \usepackage{listings}
-\usepackage{amsthm, amsmath,amssymb,amsbsy,amsfonts,amstext,rotating}
 \usepackage{alltt,multicol,pifont}
 \usepackage{booktabs,multirow,subfigure,epsfig}
 \usepackage{xspace}
-\newcommand{\eplopmark}{\ding{73}}
-\usepackage{url}
 \usepackage{tipa}
 \usepackage{array,tabularx}
 \usepackage{color}
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/pkg/ifpdf
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of the IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off
+% such as if a citation ever needs to be enclosed in parenthesis.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 5.0 (2009-03-20) and later if using hyperref.sty.
+% The latest version can be obtained at:
+% http://www.ctan.org/pkg/cite
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation
+% can be obtained at: 
+% http://www.ctan.org/pkg/graphicx
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found at:
+% http://www.ctan.org/pkg/epslatex
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+\usepackage{amsthm, amsmath,amssymb,amsbsy,amsfonts,amstext,rotating}
+%\usepackage{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics.
+%
+% Note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/amsmath
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/pkg/algorithms
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/pkg/algorithmicx
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/array
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\ifCLASSOPTIONcompsoc
+%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+%\else
+%  \usepackage[caption=false,font=footnotesize]{subfig}
+%\fi
+% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
+% for subfigure.sty, the latter of which is no longer maintained and is
+% incompatible with some LaTeX packages including fixltx2e. However,
+% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
+% which will override IEEEtran.cls' handling of captions and this will result
+% in non-IEEE style figure/table captions. To prevent this problem, be sure
+% and invoke subfig.sty's "caption=false" package option (available since
+% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
+% handling of captions.
+% Note that the Computer Society format requires a larger sans serif font
+% than the serif footnote size font used in traditional IEEE formatting
+% and thus the need to invoke different subfig.sty package options depending
+% on whether compsoc mode has been enabled.
+%
+% The latest version and documentation of subfig.sty can be obtained at:
+% http://www.ctan.org/pkg/subfig
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure.
+% Be aware that LaTeX2e kernels dated 2015 and later have fixltx2e.sty's
+% corrections already built into the system in which case a warning will
+% be issued if an attempt is made to load fixltx2e.sty as it is no longer
+% needed.
+% The latest version and documentation can be found at:
+% http://www.ctan.org/pkg/fixltx2e
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/stfloats
+% Do not use the stfloats baselinefloat ability as the IEEE does not allow
+% \baselineskip to stretch. Authors submitting work to the IEEE should note
+% that the IEEE rarely uses double column equations and that authors should try
+% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
+% packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
+% such ways.
+% Do not attempt to use stfloats with fixltx2e as they are incompatible.
+% Instead, use Morten Hogholm'a dblfloatfix which combines the features
+% of both fixltx2e and stfloats:
+%
+% \usepackage{dblfloatfix}
+% The latest version can be found at:
+% http://www.ctan.org/pkg/dblfloatfix
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/url
+% Basically, \url{my_url_here}.
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\newcommand{\eplopmark}{\ding{73}}
+\hyphenation{op-tical net-works semi-conduc-tor}
 \definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
 \definecolor{bananayellow}{rgb}{1.0, 0.88, 0.21}
 \definecolor{blue}{rgb}{0.0, 0.53, 0.74}
 
-% *** ALIGNMENT PACKAGES ***
-%
-\usepackage{array,tabularx}
-\modulolinenumbers[5]
-
-\renewcommand{\arraystretch}{0.7}
-
-\journal{Internet of Things Journal}
-
-%%%%%%%%%%%%%%%%%%%%%%%
-%% Elsevier bibliography styles
-%%%%%%%%%%%%%%%%%%%%%%%
-%% To change the style, put a % in front of the second line of the current style and
-%% remove the % from the second line of the style you would like to use.
-%%%%%%%%%%%%%%%%%%%%%%%
-
-%% Numbered
-%\bibliographystyle{model1-num-names}
-
-%% Numbered without titles
-%\bibliographystyle{model1a-num-names}
-
-%% Harvard
-%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
-
-%% Vancouver numbered
-%\usepackage{numcompress}\bibliographystyle{model3-num-names}
-
-%% Vancouver name/year
-%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
-
-%% APA style
-%\bibliographystyle{model5-names}\biboptions{authoryear}
-
-%% AMA style
-%\usepackage{numcompress}\bibliographystyle{model6-num-names}
-
-%% `Elsevier LaTeX' style
-\bibliographystyle{elsarticle-num}
-%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
-
-\begin{frontmatter}
-
+%
+% paper title
+% Titles are generally capitalized except for words such as a, an, and, as,
+% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
+% not capitalized unless they are the first or last word of the title.
+% Linebreaks \\ can be used within to get better formatting as desired.
+% Do not put math or special symbols in the title.
 \title{Test event generation for a fall-detection IoT system}
 
-%% Group authors per affiliation:
 
-\author{Lorena Guti\'errez-Madro\~nal\fnref{label1}}
-%% \author{Name\corref{cor1}\fnref{label2}}
-\ead{lorena.gutierrez@uca.es (corresponding author)}
-\author{Luigi La Blunda\fnref{label2}}
-\ead{l.lablunda@fb2.fra-uas.de}
-\author{Matthias F. Wagner\fnref{label2}}
-\ead{mfwagner@fb2.fra-uas.de}
-\author{Inmaculada Medina-Bulo\fnref{label1}}
-\ead{inmaculada.medina@uca.es}
-\address[label1]{UCASE Software Engineering Research Group, University of C\'adiz, Av. Universidad de C\'adiz, 10, 11519 Puerto Real, Spain}
-\address[label2]{WSN and IOT Research Group, Frankfurt University of Applied Sciences, Nibelungenplatz 1, 60318 Frankfurt am Main, Germany}
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+% \author{\IEEEauthorblockN{Michael Shell}
+% \IEEEauthorblockA{School of Electrical and\\Computer Engineering\\
+% Georgia Institute of Technology\\
+% Atlanta, Georgia 30332--0250\\
+% Email: http://www.michaelshell.org/contact.html}
+% \and
+% \IEEEauthorblockN{Homer Simpson}
+% \IEEEauthorblockA{Twentieth Century Fox\\
+% Springfield, USA\\
+% Email: homer@thesimpsons.com}
+% \and
+% \IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
+% \IEEEauthorblockA{Starfleet Academy\\
+% San Francisco, California 96678--2391\\
+% Telephone: (800) 555--1212\\
+% Fax: (888) 555--1212}}
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+% \author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+% Homer Simpson\IEEEauthorrefmark{2},
+% James Kirk\IEEEauthorrefmark{3}, 
+% Montgomery Scott\IEEEauthorrefmark{3} and
+% Eldon Tyrell\IEEEauthorrefmark{4}}
+% \IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+% Georgia Institute of Technology,
+% Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+% \IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+% Email: homer@thesimpsons.com}
+% \IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+% Telephone: (800) 555--1212, Fax: (888) 555--1212}
+% \IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+\author{\IEEEauthorblockN{Lorena Guti\'errez-Madro\~nal\IEEEauthorrefmark{1},
+Luigi La Blunda\IEEEauthorrefmark{2}, Matthias F. Wagner\IEEEauthorrefmark{2} and
+Inmaculada Medina-Bulo\IEEEauthorrefmark{1}}\\
+\IEEEauthorblockA{\IEEEauthorrefmark{1}UCASE Software Engineering Research Group, University of C\'adiz, Av. Universidad de C\'adiz, 10, 11519 Puerto Real, Spain
+Email: \{lorena.gutierrez, inmaculada.medina\}@uca.es}\\
+\IEEEauthorblockA{\IEEEauthorrefmark{2}WSN and IOT Research Group, Frankfurt University of Applied Sciences, Nibelungenplatz 1, 60318 Frankfurt am Main, Germany
+Email: \{l.lablunda, mfwagner\}@fb2.fra-uas.de}}
 
 
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract
 \begin{abstract}
 The Internet of Things (IoT) is a popular paradigm which has been applied to different areas 
 such as smart cities, medicine or business processes. One of the main drawbacks of an IoT system is the 
@@ -94,17 +414,25 @@ the IoT-TEG (IoT - Test Event Generator) tool. The fall analysis has highlighted
 with a new functionality which allows defining the desired conduct by defining behaviour rules.
 \end{abstract}
 
-\begin{keyword}
-event generator\sep testing\sep Internet of Things\sep Complex Event Processing\sep fall detection\sep behaviour rules
-\end{keyword}
+% no keywords
 
-\end{frontmatter}
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
 
 \section{Introduction}
-
-Due to the progress of health care, the longevity of people increases and this leads to an ageing society. %Elderly people are exposed 
-%to a higher risk of falling because of the growing age and multiple diseases, which cause serious injuries that require long convalescence 
-%and restriction of mobility. 
+Due to the progress of health care, the longevity of people increases and this leads to an ageing society.
 According to the survey of the \textit{Robert Koch Institute}~\cite{Varnaccia2013}, 53.7\% of accidents in the age 
 group over 60 are caused by falls. Statistically, about one-third of the elderly people suffer severe lesions and the half of them suffer 
 fall-events repeatedly~\cite{Schott2008}. Falls are not caused by a single cause, 90\% of them occurred from multiple factors. These 
@@ -201,29 +529,6 @@ to be classified as a full IoT platform. Examples are given in the following lin
  that is why IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017} includes this option.
 \end{itemize}
 
-% Talking about fall-detection, there are several solutions that propose wearable sensors.
-% A commercial solution which is 
-% available on the market is the VigiFall system~\cite{Vigilio,EuropeanCommission2013}, supported by the European Commission. This system 
-% includes a wearable self-adhesive accelerometer, several motion sensors which are fixed in the living area and a calling unit to provide 
-% a fully automated emergency call. The self-adhesive patch communicates with the infrared motion detectors and in the case of a fall the 
-% wearable patch sends a signal out. Thereby the infrared sensors placed in the room are capable to recognise that there are no movements anymore and 
-% contacts the central unit. When the central node receives this flag, the emergency call is executed. The weak point of VigiFall~\cite{Vigilio} is 
-% the system structure which depends on the sensor-based room infrastructure. Once the patient leaves this area the system is not capable 
-% to provide the functionalities in case of a fall-event. Igual et al.~\cite{Igual2013} examined different fall-detection approaches which they 
-% categorised into context-aware systems and wearable systems. Context-aware systems depend on the living area of the patient, where 
-% sensors and actuators placed in the environment interact with the wearable node of the person to detect falls. Another solution based 
-% on this principle is a video-based method, which facilitates a reliable detection of falls but the patients would be exposed to a 
-% loss of privacy and this is not well accepted. Additionally the high purchase price is a barrier for many people and the dependency 
-% on the environment makes these system useless. The other system-type analysed by Igual et al.~\cite{Igual2013} comprises wearable systems, which 
-% are worn on the body and based on a BAN. This solution is able to detect falls independent from the environment in contrast to 
-% context-aware systems. They depict wearable systems which use the sensor fusion principle of accelerometer and gyroscope 
-% and built-in solutions that represent the usage of integrated
-% smartphone sensors. Collado Villaverde et. al ~\cite{colladoTriaxal}
-% use a smartwatch for acquiring accelerometer data and machine learning
-% methods to detect a fall event.
-
-%Taking into consideration 
-
 Talking about fall-detection, there are several solutions that propose wearable sensors.
 We are going to focus our attention in the approach proposed by Li et al.~\cite{Li2009}; their wearable fall-detection solutions,
 which will be explained subsequently, was used for the development of our prototype. They introduce a fall-detection method based on a BAN that consists 
@@ -301,20 +606,6 @@ To apply this rule we used the EPL of EsperTech~\cite{Esper:2016} to integrate i
 Etzion and Niblett~\cite{Etz10} defined \textit{event processing agents} as software modules that process events. Such agents are specified using an 
 EPL, and there are a number of styles of EPLs in use. The following styles are included: rule-oriented, imperatives and stream-oriented.
 
-% \begin{itemize}
-%  \item Rule-oriented languages
-%  \begin{itemize}
-%  \item Production rules: Production rules are rules of the type \textit{if condition then action}: when the condition is satisfied, the action is performed.
-%  \item Active rules: Active rules are rules of the type \textit{event-condition-action}: when an event occurs, the conditions are evaluated and, if they are satisfied, 
-%  it triggers an action.
-%  \item Logic rules: A programming style based on logical assertions and a deductive database. 
-%  \end{itemize}
-%  \item Imperative programming languages: The imperative programming languages define the operators which will be applied to the events. Each operator is a
-%  transformation in the event.
-%  \item Stream-oriented languages: The languages used to describe the queries are inspired by SQL and relational algebra, though not all of them are 
-%  based on SQL.
-% \end{itemize}
-
 The EPL our work is based on is EPL of Esper~\cite{Esper:2016}, a stream-oriented language. The main reasons of its selection are: 
 it is an extension of Structured Query Language (SQL), it can be embedded into Java applications and it is open source. On the other hand, it is executed by Esper, a
 CEP engine which can process around 500.000 events per second on a workstation, and between 70.000 and 200.000 events per second on a laptop (according to 
@@ -326,9 +617,10 @@ runtime. While the execution is taking place, EPL queries will be triggered if t
  
  \renewcommand{\lstlistingname}{Example}
  
- \begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=SQL,caption=EPL of EsperTech query example,label=EPLqueries]
+ \begin{lstlisting}[basicstyle=\ttfamily\scriptsize,language=SQL,caption=EPL of EsperTech query example,label=EPLqueries]
 select A as temp1, B as temp2 from 
-  pattern [every temp1.temperature > 400 -> temp2.temperature > 400]
+  pattern [every temp1.temperature > 400 -> 
+  temp2.temperature > 400]
  \end{lstlisting}
  
 In the above example (see Example~\ref{EPLqueries}) of a ``nuclear
@@ -373,39 +665,27 @@ for testing, needing specific values for the events, and needing the source to g
 For the sake of clarity, Example~\ref{eventTypeDef} shows an event type
 definition that could be used to test the queries of Example~\ref{EPLqueries}.
 
-\begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=XML,caption=Event type definition example,label=eventTypeDef]
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,language=XML,caption=Event type definition example,label=eventTypeDef]
 <?xml version="1.0" encoding="UTF-8"?>
 <event_type name="TemperatureEvent">
-  <block name="feeds" repeat="150">
-    <field name="created_at" quotes="true" type="ComplexType">
-     <attribute type="Date" format="yy-MM-dd"></attribute>
-     <attribute type="String" format="T"></attribute>
-     <attribute type="Time" format="hh:mm"></attribute>
-    </field>
-    <field name="entry_id" quotes="false" type="Integer" 
-    min="0" max="10000"></field>
-    <field name="temperature" quotes="false" type="Float" 
-    min="0" max="500" precision="1"></field>
-  </block>
+ <block name="feeds" repeat="150">
+  <field name="created_at" quotes="true" type="ComplexType">
+   <attribute type="Date" format="yy-MM-dd"></attribute>
+   <attribute type="String" format="T"></attribute>
+   <attribute type="Time" format="hh:mm"></attribute>
+  </field>
+  <field name="entry_id" quotes="false" type="Integer" 
+  min="0" max="10000"></field>
+  <field name="temperature" quotes="false" type="Float" 
+  min="0" max="500" precision="1"></field>
+ </block>
 </event_type>
 \end{lstlisting}
 
-The defined event type contains three properties: \texttt{created\_at},
-\texttt{entry\_id} and \texttt{temperature}. These properties are defined as
-fields in the event type definition. The \texttt{created\_at} field is complex
-type and \texttt{entry\_id} and \texttt{temperature} are simple types. 
-%The
-%property that is evaluated in the Example~\ref{eventTypeDef} queries is
-%\texttt{temperature}.
-
-% Apart from the mentioned challenges that IoT-TEG solves in order to test 
-% event-processing programs, it incorporates a specific functionality
-% for testing programs than use EPL of EsperTech. This functionality helps to 
-% automatically generate events with specific values in accordance with the 
-% program which will process them. IoT-TEG analyses the Esper EPL queries and 
-% generates events depending on the logical and relational operations. Following 
-% the Example~\ref{EPLqueries}, the generated events will have their temperature 
-% higher than 400.
+The defined event type contains three properties: \texttt{\small{created\_at}},
+\texttt{\small{entry\_id}} and \texttt{\small{temperature}}. These properties are defined as
+fields in the event type definition. The \texttt{\small{created\_at}} field is complex
+type and \texttt{\small{entry\_id}} and \texttt{\small{temperature}} are simple types. 
 
 \section{Prototype}
 \label{sec:basicprototype}
@@ -426,7 +706,7 @@ includes a five sensor nodes which is based on ZigBee/IEEE 802.15.4\footnote{\ur
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[scale=0.25]{./img/belt}
+  \includegraphics[scale=0.2]{./img/belt}
   \caption[Fall-detection belt]{Fall-detection belt~\cite{LaBlunda.2016,LaBlunda.2016b}}
   \label{fig:belt}
 \end{figure}
@@ -481,7 +761,7 @@ several motions and fall-types which are typical in nursing homes and hospitals.
 Taking into account the architecture of the prototype and the rule to define a fall, see Equation (\ref{eq:acel}), 
 the EPL of EsperTech pattern to define the fall situation is the one shown in the Example~\ref{FallPattern}.
 
-\begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=SQL,caption=Fall pattern,label=FallPattern]
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,language=SQL,caption=Fall pattern,label=FallPattern]
   select a1.accelS1, a2.accelS1, a1.accelS2, a2.accelS2 from 
    pattern [every(a1=BodyEvent(a1.accelS1 <= 9.81) -> 
    a2=BodyEvent(a2.accelS1 -a1.accelS1 >= 9.81 and 
@@ -489,7 +769,7 @@ the EPL of EsperTech pattern to define the fall situation is the one shown in th
    where timer:within(1sec)) or every 
    (a1=BodyEvent(a1.accelS2 <= 9.81)
    -> a2=BodyEvent(a2.accelS2-a1.accelS2 >= 9.81
-   and a1.PersonID = a2.PersonID) where timer:within(1sec))];
+   and a1.PersonID = a2.PersonID) where timer:within(1sec))]
  \end{lstlisting}
 
 The illustrated EPL query is based on the physical principle depicted in 
@@ -502,10 +782,10 @@ are selected to create a pattern for fall-detection. In the given example the
 following event properties are selected:
 
 \begin{itemize}
- \item \texttt{a1.accelS1}: starting acceleration value of node 1.
- \item \texttt{a2.accelS1}: subsequent acceleration value of node 1.
- \item \texttt{a1.accelS2}: starting acceleration value of node 2.
- \item \texttt{a2.accelS2}: subsequent acceleration value of node 2.
+ \item \texttt{\small{a1.accelS1}}: starting acceleration value of node 1.
+ \item \texttt{\small{a2.accelS1}}: subsequent acceleration value of node 1.
+ \item \texttt{\small{a1.accelS2}}: starting acceleration value of node 2.
+ \item \texttt{\small{a2.accelS2}}: subsequent acceleration value of node 2.
 \end{itemize}
 
 Taking into consideration the selected event properties the query checks if the 
@@ -541,11 +821,11 @@ alterations because several factors: the person's movement, the person bouncing 
 (floor, wall, etc), the collocation of the sensors to the original position after a fall, 
 sensor pressure because of an impact or the person is laying over it, etc.
 
- \begin{figure*}[!ht]
-  \includegraphics[scale=0.255]{img/Sensor1Sombras}
+ \begin{figure}[!ht]
+  \includegraphics[scale=0.19]{img/Sensor1Sombras}
   \caption[Sensor 1 acceleration]{Sensor 1 acceleration.}
   \label{fig:Sensor1Sombras}
-\end{figure*}
+\end{figure}
 
 \subsubsection*{2. Fall identification and analysis} After the previous study, the peaks of the acceleration are identified. 
 These peaks, or maximum values, are when the sensor suffers the
@@ -577,7 +857,7 @@ see Section~\ref{subsec:analysis}.
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[scale=0.5]{img/Comparativa}
+  \includegraphics[scale=0.45]{img/Comparativa}
   \caption[Acceleration comparative]{Acceleration comparative.}
   \label{fig:Sensor1}
 \end{figure}
@@ -606,21 +886,22 @@ Taking into account the architecture of the prototype and the previous rules to 
 pattern to the define a RBF fall is the one shown in the Example~\ref{RBFpattern}.
 
 %include mathscape to use use the option mathescape for your environment which gives you the ability to use the normal latex behavior of the $-signs
-\begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=SQL, mathescape,caption=RBF pattern,label=RBFpattern]
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,language=SQL, mathescape,caption=RBF pattern,label=RBFpattern]
 select a1.accelS1, a2.accelS1, a3.accelS1, a4.accelS1 from 
 pattern[every(a1 = BodyEvent(a1.accelS1 <= 9.81) -> 
 a2 = BodyEvent(a2.accelS1 - a1.accelS1 >= 9.81) ->
 a3 = BodyEvent(a3.accelS1 < 9.81) ->
 a4 = BodyEvent(a4.accelS1 - a3.accelS1 >= 9.81 
-and a2.accelS1 = a4.accelS1 / 2 $\pm$ 0.5) where timer:within(1sec))];
+and a2.accelS1 = a4.accelS1 / 2 $\pm$ 0.5) where 
+timer:within(1sec))]
 \end{lstlisting}
 
 The displayed EPL query depicts a recognition pattern which could be used to detect the rolling out of bed. Given that all the sensors are following the same pattern, one sensor node (S1) was used to create the query which makes it easier to understand the pattern. With the \textit{select} statement the event properties are selected to create a fall-detection pattern. In the given query the following event properties are selected:
 \begin{itemize}
-  \item \texttt{a1.accelS1}: starting acceleration value for stationary position (e.g. laying).
-  \item \texttt{a1.accelS2}: subsequent acceleration value for rolling event.
-  \item \texttt{a1.accelS3}: subsequent acceleration value for free fall event.
-  \item \texttt{a1.accelS4}: subsequent acceleration value for impact detection.
+  \item \texttt{\small{a1.accelS1}}: starting acceleration value for stationary position (e.g. laying).
+  \item \texttt{\small{a1.accelS2}}: subsequent acceleration value for rolling event.
+  \item \texttt{\small{a1.accelS3}}: subsequent acceleration value for free fall event.
+  \item \texttt{\small{a1.accelS4}}: subsequent acceleration value for impact detection.
 \end{itemize}
 
 Taking into consideration that the RBF fall is a complex event to detect, this event has been divided in the following phases:
@@ -631,27 +912,27 @@ Taking into consideration that the RBF fall is a complex event to detect, this e
   \item Free fall phase.
   \item Impact phase.
 \end{itemize}
+% 
+% The EPL query first checks if the starting acceleration \texttt{\small{a1.accelS1}} is $<=$ 9.81m/$s^2$ which means that the person is laying 
+% on the bed (stationary position). Additionally, the subsequent property is checked. If the difference between the successive 
+% acceleration value (\texttt{\small{a2.accelS1}}) and the previous one (\texttt{\small{a1.accelS1}}) is $>=$ 9.81 m/$s^2$ then the person has a transition to 
+% the rolling phase. If the person is falling after turning, the subsequent acceleration value should be $<$ 9.81 m/$s^2$ 
+% which means that the person is in the free fall phase. Additionally, if the difference between the current acceleration value 
+% (\texttt{\small{a4.accelS1}}) and the previous one (\texttt{\small{a3.accelS1}}) is
+% $>=$ 9.81 m/$s^2$, it is an indication for a fall. For a query to
+% recognise this event as a fall all these sequences should happen within a time window of 1 second.
+% 
+% \subsubsection*{3. To define the fall event} Once the fall acceleration behaviour has been observed, the next step is to define the 
+% fall event in order to generate test events with IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017}. As it was explained in 
+% Section~\ref{iotteg}, the event type attributes have
+% to be defined using the \texttt{\small{<field>}} element. The fall event contains one attribute, the acceleration, which is float, 
+% \texttt{\small{type=``Float''}}, and its values are not quoted, \texttt{\small{quotes=``false''}}. A new parameter in IoT-TEG has been defined as a 
+% consequence of the previous falls study. Given that the acceleration values follow a specific behaviour, it is necessary to include 
+% the \texttt{\small{custom\_behaviour}} property in the \texttt{\small{<field>}} element to define the behaviour of any event attribute; 
+% in this study, the acceleration. In the \texttt{\small{custom\_behaviour}} property the path to the file that includes the behaviour of the 
+% event attribute has to be written. The Example~\ref{FallEvent} shows the complete fall event definition (FallEventType).
 
-The EPL query first checks if the starting acceleration \texttt{a1.accelS1} is $<=$ 9.81m/$s^2$ which means that the person is laying 
-on the bed (stationary position). Additionally, the subsequent property is checked. If the difference between the successive 
-acceleration value (\texttt{a2.accelS1}) and the previous one (\texttt{a1.accelS1}) is $>=$ 9.81 m/$s^2$ then the person has a transition to 
-the rolling phase. If the person is falling after turning, the subsequent acceleration value should be $<$ 9.81 m/$s^2$ 
-which means that the person is in the free fall phase. Additionally, if the difference between the current acceleration value 
-(\texttt{a4.accelS1}) and the previous one (\texttt{a3.accelS1}) is
-$>=$ 9.81 m/$s^2$, it is an indication for a fall. For a query to
-recognise this event as a fall all these sequences should happen within a time window of 1 second.
-
-\subsubsection*{3. To define the fall event} Once the fall acceleration behaviour has been observed, the next step is to define the 
-fall event in order to generate test events with IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017}. As it was explained in 
-Section~\ref{iotteg}, the event type attributes have
-to be defined using the \texttt{<field>} element. The fall event contains one attribute, the acceleration, which is float, 
-\texttt{type=``Float''}, and its values are not quoted, \texttt{quotes=``false''}. A new parameter in IoT-TEG has been defined as a 
-consequence of the previous falls study. Given that the acceleration values follow a specific behaviour, it is necessary to include 
-the \texttt{custom\_behaviour} property in the \texttt{<field>} element to define the behaviour of any event attribute; 
-in this study, the acceleration. In the \texttt{custom\_behaviour} property the path to the file that includes the behaviour of the 
-event attribute has to be written. The Example~\ref{FallEvent} shows the complete fall event definition (FallEventType).
-
-\begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=XML,caption={Fall event type definition},label=FallEvent]
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,language=XML,caption={Fall event type definition},label=FallEvent]
 <?xml version="1.0" encoding="UTF-8"?>
 <event name="FallEventType">
 <block name="feeds" repeat="100">
@@ -662,52 +943,52 @@ event attribute has to be written. The Example~\ref{FallEvent} shows the complet
 \end{lstlisting}
 
 IoT-TEG includes a new functionality, which has been implemented to simulate the desired behaviour of an 
-event attribute with a \texttt{custom\_behaviour} property in its event type definition. This functionality 
+event attribute with a \texttt{\small{custom\_behaviour}} property in its event type definition. This functionality 
 allows to generate values of the event attribute following a behaviour
 that the IoT-TEG user has described in a file.
 In order to explain how the user has to define the desired behaviour of an event attribute, we are going
 to use the RBF fall behaviour rules (see Example~\ref{RBFFallRules}). In a XML file the number of simulations has to be
 indicated, the events involved in a simulation will be calculated according to the total number of events
 to generate and the desired simulations. For example, if the number of test events to generate is 100, 
-the number indicated in the event type definition file, \texttt{repeat="100"}, and the number of desired 
-simulations is 5, \texttt{simulations="5"}, the number indicated in the behaviour rules definition file, 
+the number indicated in the event type definition file, \texttt{\small{repeat="100"}}, and the number of desired 
+simulations is 5, \texttt{\small{simulations="5"}}, the number indicated in the behaviour rules definition file, 
 the number of events involved to simulate the behaviour is 20. In the RBF fall example, the user asks to 
 generate 100 test events and 5 falls (simulations), so 20 events will be used to define a RBF fall.
 
 Variables can be defined if they are needed in the behaviour rules. They can be defined in the file where
-the behaviour rules are included using the \texttt{<variables>} tags. To define them a name and a value 
-have to be given to the variables. The value can be defined as a fixed value with the \texttt{value} 
-property, or using a range with the \texttt{min} and \texttt{max} properties. Moreover, in some variables
+the behaviour rules are included using the \texttt{\small{<variables>}} tags. To define them a name and a value 
+have to be given to the variables. The value can be defined as a fixed value with the \texttt{\small{value}} 
+property, or using a range with the \texttt{\small{min}} and \texttt{\small{max}} properties. Moreover, in some variables
 are involved in the value of another variables; this is indicated using the variable with an specific 
-format \texttt{\$(variable)}, see Example~\ref{RBFFallRules}. In addition, arithmetic operations can be 
+format \texttt{\small{\$(variable)}}, see Example~\ref{RBFFallRules}. In addition, arithmetic operations can be 
 done in the definition of the variable values. Let us see how using them in the RBF fall example. To 
-define the acceleration behaviour during a RBF fall three variables are defined: \texttt{Roll}, 
-\texttt{Fall} and \texttt{Impact}. \texttt{Impact} will be the maximum value $\alpha_{max}$, 
-\texttt{Fall} will be the minimum value $\alpha_{min}$ and the \texttt{Roll} variable is defined by a 
-range where the acceleration value will be obtained according to the \texttt{Impact} value. In order to
-obtain a low value, a range between 0 and the fifth part of \texttt{Roll} is assigned to the \texttt{Fall} 
+define the acceleration behaviour during a RBF fall three variables are defined: \texttt{\small{Roll}}, 
+\texttt{\small{Fall}} and \texttt{\small{Impact}}. \texttt{\small{Impact} will be the maximum value $\alpha_{max}$, 
+\texttt{\small{Fall}} will be the minimum value $\alpha_{min}$ and the \texttt{\small{Roll}} variable is defined by a 
+range where the acceleration value will be obtained according to the \texttt{\small{Impact}} value. In order to
+obtain a low value, a range between 0 and the fifth part of \texttt{\small{Roll}} is assigned to the \texttt{\small{Fall}} 
 variable.
 
-Once the variables are defined, the \texttt{<rules>} tags are used to define the rules. A \texttt{weight}
+Once the variables are defined, the \texttt{\small{<rules>}} tags are used to define the rules. A \texttt{\small{weight}}
 must be assigned to each one to calculate the number of events to generate for each rule for each simulation.
-Following the example and the assigned \texttt{weight} in Example~\ref{RBFFallRules}, if 20 events simulate 
+Following the example and the assigned \texttt{\small{weight}} in Example~\ref{RBFFallRules}, if 20 events simulate 
 a RBF fall $20 * 0,25 = 5$ events will be generated for the first rule, another 5 events for the second rule,
 1 event for the third rule, and the remained events for the fourth rule. We have to assign zero to the weight
-\texttt{weight="0"} to indicate how the remained events have to be generated.
+\texttt{\small{weight="0"}} to indicate how the remained events have to be generated.
 
-To define the rules, \texttt{min}, \texttt{max} and \texttt{value} properties can be used as well as the arithmetic 
-operations and the references to another variables. Moreover, the \texttt{sequence} property can be used to obtain
-values lower or higher than the one generated previously. The \texttt{sequence} property values are \texttt{inc}, 
-to increase the value, or \texttt{dec}, to decrease the value.
+To define the rules, \texttt{\small{min}}, \texttt{\small{max}} and \texttt{\small{value}} properties can be used as well as the arithmetic 
+operations and the references to another variables. Moreover, the \texttt{\small{sequence}} property can be used to obtain
+values lower or higher than the one generated previously. The \texttt{\small{sequence}} property values are \texttt{\small{inc}}, 
+to increase the value, or \texttt{\small{dec}}, to decrease the value.
 
 Thanks to the included properties and parameters in the IoT-TEG new functionality, the desired behaviour rules can
 be defined. In the RBF fall rules, the involved event attribute is the acceleration, and its behaviour during the 
-fall is defined by four rules; in the first rule the acceleration value increases to a value close or equal to \texttt{Roll},
-in the second rule the acceleration value decreases to a value close or equal to \texttt{Fall}, in the third rule the 
-acceleration value is equal to \texttt{Impact}, it obtains the highest value and in the fourth rule the acceleration value
-is established in a range which is lower than \texttt{Roll}.
+fall is defined by four rules; in the first rule the acceleration value increases to a value close or equal to \texttt{\small{Roll}},
+in the second rule the acceleration value decreases to a value close or equal to \texttt{\small{Fall}, in the third rule the 
+acceleration value is equal to \texttt{\small{Impact}}, it obtains the highest value and in the fourth rule the acceleration value
+is established in a range which is lower than \texttt{\small{Roll}}.
 
-\begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=XML,caption={Rules to define a RBF fall},label=RBFFallRules]
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,language=XML,caption={Rules to define a RBF fall},label=RBFFallRules]
   <?xml version="1.0" encoding="UTF-8"?>
   <custom_conditions simulations="5">
   <variables>
@@ -719,9 +1000,11 @@ is established in a range which is lower than \texttt{Roll}.
   <rules>
    <rule weight="0.25" min="$(Roll)/4" max="$(Roll)" 
     sequence="inc"/>
-   <rule weight="0.25" min="$(Roll)" max="$(Fall)" sequence="dec"/>
+   <rule weight="0.25" min="$(Roll)" max="$(Fall)" 
+    sequence="dec"/>
    <rule weight="1" value="$(Impact)"/>
-   <rule weight="0" min="$(Roll)/2-0.25" max="$(Roll)/2+0.25"/>
+   <rule weight="0" min="$(Roll)/2-0.25" 
+    max="$(Roll)/2+0.25"/>
   </rules>
   </custom_conditions>
 \end{lstlisting}
@@ -734,7 +1017,7 @@ IoT-TEG and the new functionality.
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[scale=0.3]{img/IoTTEGRBFGeneratedEvents}
+  \includegraphics[scale=0.25]{img/IoTTEGRBFGeneratedEvents}
   \caption[IoT-TEG generated RBF falls]{IoT-TEG generated RBF falls.}
   \label{fig:IoTTEGRBFGeneratedEvents}
 \end{figure}
@@ -770,7 +1053,7 @@ based on four sensor nodes (S1-S4), but with the following significant innovatio
  \item The dataset which is sent by the sensor nodes (S1- S4) is composed as follows 
  and includes the values of $\alpha_{i}, i \in {x,y,z}$ in unit $m/s^{2}$:
  \begin{center}
-  \texttt{SensorID, X-Acceleration, Y-Acceleration, Z-Acceleration}
+  \texttt{\small{SensorID, X-Acceleration, Y-Acceleration, Z-Acceleration}}
  \end{center}
  Compared to the dataset format of the previous prototype the sensor identification 
  number was added and the significantly change is that only the single axis values of 
@@ -860,24 +1143,25 @@ them follows the same pattern.
 Taking into account the architecture of the prototype and the previous rules to define a FAW fall, the EPL of EsperTech
 pattern to the define a FAW fall is the one shown in the Example~\ref{FAWpattern}.
 
-\begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=SQL, mathescape,caption=FAW pattern,label=FAWpattern]
-select a1.accelS1, a2.accelS1, a3.accelS1, a4.accelS1, a5.accelS1 
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,language=SQL, mathescape,caption=FAW pattern,label=FAWpattern]
+select a1.accelS1, a2.accelS1, a3.accelS1, a4.accelS1, 
+a5.accelS1 
 from pattern[every(a1 = BodyEvent(a1.accelS1 >= 9.81) -> 
 a2 = BodyEvent(a2.accelS1 < 9.81) ->
 a3 = BodyEvent(a3.accelS1 - a2.accelS1 >= 9.81) ->
 a4 = BodyEvent(a4.accelS1 < 9.81) ->
 a5 = BodyEvent(a5.accelS1 - a4.accelS1 >= 9.81) 
-where timer:within(1sec))];
+where timer:within(1sec))]
 \end{lstlisting}
 
 Considering the above EPL query, the following event properties are selected for the recognition of the FAW fall:
 
 \begin{itemize}
-  \item \texttt{a1.accelS1}: starting acceleration value for dynamic postures (e.g. walking).
-  \item \texttt{a2.accelS1}: successive acceleration value for free fall before wall impact.
-  \item \texttt{a3.accelS1}: subsequent acceleration value for wall impact.
-  \item \texttt{a4.accelS1}: successive acceleration value for free fall event.
-  \item \texttt{a5.accelS1}: subsequent acceleration value for impact to the ground.
+  \item \texttt{\small{a1.accelS1}}: starting acceleration value for dynamic postures (e.g. walking).
+  \item \texttt{\small{a2.accelS1}}: successive acceleration value for free fall before wall impact.
+  \item \texttt{\small{a3.accelS1}}: subsequent acceleration value for wall impact.
+  \item \texttt{\small{a4.accelS1}}: successive acceleration value for free fall event.
+  \item \texttt{\small{a5.accelS1}}: subsequent acceleration value for impact to the ground.
 \end{itemize}
 
 This event has been divided in the following phases:
@@ -889,13 +1173,13 @@ This event has been divided in the following phases:
   \item Impact phase.
 \end{itemize}
 
-The EPL query checks if the starting acceleration \texttt{a1.accelS1} is $>=$ 9.81 m/$s^2$ which means that the person is walking. 
-The next acceleration value (\texttt{a2.accelS1}) is used to detect the free fall phase to the wall. If \texttt{a2.accelS1} 
+The EPL query checks if the starting acceleration \texttt{\small{a1.accelS1}} is $>=$ 9.81 m/$s^2$ which means that the person is walking. 
+The next acceleration value (\texttt{\small{a2.accelS1}}) is used to detect the free fall phase to the wall. If \texttt{\small{a2.accelS1}} 
 is $<$ 9.81 m/$s^2$ it indicates that the person is falling against the fall. Additionally, if the difference between 
-the current acceleration value (\texttt{a3.accelS1}) and the previous acceleration value (\texttt{a2.accelS1}) is $>=$ 9.81 m/$s^2$ 
+the current acceleration value (\texttt{\small{a3.accelS1}}) and the previous acceleration value (\texttt{\small{a2.accelS1}}) is $>=$ 9.81 m/$s^2$ 
 it indicates the impact against a wall. After that, the person suffered the impact against a wall the upcoming 
-acceleration value (\texttt{a4.accelS1}) should be less than 9.81 m/$s^2$. This indicates that the person is falling to 
-the ground. If the difference between the successive value (\texttt{a5.accelS1}) and the previous value (\texttt{a4.accelS1}) 
+acceleration value (\texttt{\small{a4.accelS1}}) should be less than 9.81 m/$s^2$. This indicates that the person is falling to 
+the ground. If the difference between the successive value (\texttt{\small{a5.accelS1}}) and the previous value (\texttt{\small{a4.accelS1}}) 
 is $>=$ 9.81 m/$s^2$ it means that the person has suffered an impact to the ground. To classify this event as 
 a FAW fall this pattern flow should happen within a time window of 1 second.
 
@@ -905,7 +1189,7 @@ attribute in this fall is the acceleration, the Example~\ref{FallEvent} in Secti
 the fall event (FallEventType). The rules to define the behaviour of the acceleration in this type of fall is shown in 
 Example~\ref{FAWFallRules}.
 
-\begin{lstlisting}[basicstyle=\ttfamily\footnotesize,language=XML,caption={Rules to define a FAW fall},label=FAWFallRules]
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,language=XML,caption={Rules to define a FAW fall},label=FAWFallRules]
   <?xml version="1.0" encoding="UTF-8"?>
   <custom_conditions simulations="5">
   <variables>
@@ -929,19 +1213,19 @@ Example~\ref{FAWFallRules}.
   </custom_conditions>
 \end{lstlisting}
 
-To define the acceleration behaviour during a FAW fall three variables are defined: \texttt{Base}, 
-\texttt{ImpactWall} and \texttt{Impact}. Given that the acceleration behaviour during a FAW fall has
+To define the acceleration behaviour during a FAW fall three variables are defined: \texttt{\small{Base}}, 
+\texttt{\small{ImpactWall}} and \texttt{\small{Impact}}. Given that the acceleration behaviour during a FAW fall has
 been according to the normalised values, the variables and rules have been defined according to 
 that analysis. The acceleration value in a stationary position is a variable depending on the person, so 
 we have considered the established value, $1g\approx9.81m/s^{2}$. That is the fixed value of the 
-\texttt{Base} variable. To determine the values of the impacts, we have taken into account that the 
-normalised value have to be $> 0,7$. So, to ensure that the impacts, \texttt{ImpactWall} and 
-\texttt{Impact}, have a value meeting the mentioned condition the minimum value of the impact is the 
-sum of the \texttt{Base} and \texttt{Base} multiplied by \texttt{Base}$*0,7$; and the maximum value of the
-impacts is $3g\approx9,81*3=$\texttt{Base}$*3$.
+\texttt{\small{Base}} variable. To determine the values of the impacts, we have taken into account that the 
+normalised value have to be $> 0,7$. So, to ensure that the impacts, \texttt{\small{ImpactWall}} and 
+\texttt{\small{Impact}}, have a value meeting the mentioned condition the minimum value of the impact is the 
+sum of the \texttt{\small{Base}} and \texttt{\small{Base}} multiplied by \texttt{\small{Base}}$*0,7$; and the maximum value of the
+impacts is $3g\approx9,81*3=$\texttt{\small{Base}}$*3$.
 
 Once the variables are defined, the rules have to be determined. The first step is to indicate the 
-\texttt{weight} for each rule in order to calculate the number of events to generate for each rule for 
+\texttt{\small{weight}} for each rule in order to calculate the number of events to generate for each rule for 
 each simulation. Following the simulation values the number of events to generate for each rule, according 
 to the assigned weights, is: $20 * 0,25 = 5$ events will be generated for the first rule, another 5 events 
 for the second rule, 1 event for the third rule, 5 events for the fourth rule, 1 event for the fifth
@@ -950,11 +1234,11 @@ rule and the remained events, three events, for the sixth rule.
 Thanks to the included properties and parameters in the IoT-TEG new functionality, the desired behaviour rules that
 follow the normalised acceleration values can be defined. Given that we have considered to define the FAW fall behaviour
 rules according to the normalised values, the values to generate depend on the maximum value. Due to there are two 
-values that can be the highest one, \texttt{ImpactWall} or \texttt{Impact}, the rules that depend on the maximum 
-value contains the reference to the value, \texttt{ImpactWall} or \texttt{Impact}, according to the proximity
-of the rule. For instance, the first and second FAW fall rules contain a reference to \texttt{ImpactWall}, the impact 
+values that can be the highest one, \texttt{\small{ImpactWall}} or \texttt{\small{Impact}}, the rules that depend on the maximum 
+value contains the reference to the value, \texttt{\small{ImpactWall}} or \texttt{\small{Impact}}, according to the proximity
+of the rule. For instance, the first and second FAW fall rules contain a reference to \texttt{\small{ImpactWall}}, the impact 
 in the wall (third rule), which happens after the person is walking, something described in the first and the second rules.
-The fourth and sixth rules contain a reference to \texttt{Impact}, the impact on the ground (fifth rule), which happen
+The fourth and sixth rules contain a reference to \texttt{\small{Impact}}, the impact on the ground (fifth rule), which happen
 after the person is falling and the person is laying on the floor, fourth and sixth rules.
 
 It is important to highlight that to obtain these rules to define the behaviour of the normalised acceleration several tests
@@ -1089,7 +1373,7 @@ the real situations and behaviour of the events.
 
 The introduced IoT-TEG functionality will be improved with a new property. This property will allow to generate values 
 which follow behaviour rules but depends from another event attribute value. IoT-TEG has the option
-to generate dependent values thanks to the \texttt{dependence} property. This property generates the event attribute value 
+to generate dependent values thanks to the \texttt{\small{dependence}} property. This property generates the event attribute value 
 according to a fixed value; so we will extend the tool with the option to define a dependence rule between event attributes. 
 
 To generate test events, reliable data transmission of all four sensor nodes (S1-S4) must be guaranteed. As described in 
@@ -1117,8 +1401,136 @@ Paper partially funded by The Ministry of Economy and Competitiveness (Spain) an
 Research, Development and Innovation, Societal Challenges Oriented, Project DArDOS TIN2015-65845-C3-3-R, and the Program of
 Development and Impulse of Research Activity of the University of Cadiz.
 
-\section*{References}
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=2.5in]{myfigure}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+% via \DeclareGraphicsExtensions.
+%\caption{Simulation results for the network.}
+%\label{fig_sim}
+%\end{figure}
+
+% Note that the IEEE typically puts floats only at the top, even when this
+% results in a large percentage of a column being occupied by floats.
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command,
+% and the \label for the overall figure must come after \caption.
+% \hfil is used as a separator to get equal spacing.
+% Watch out that the combined width of all the subfigures on a 
+% line do not exceed the text width or a line break will occur.
+%
+%\begin{figure*}[!t]
+%\centering
+%\subfloat[Case I]{\includegraphics[width=2.5in]{box}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{box}%
+%\label{fig_second_case}}
+%\caption{Simulation results for the network.}
+%\label{fig_sim}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat[]), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+% Be aware that for subfig.sty to generate the (a), (b), etc., subfigure
+% labels, the optional argument to \subfloat must be present. If a
+% subcaption is not desired, just leave its contents blank,
+% e.g., \subfloat[].
+
+
+% An example of a floating table. Note that, for IEEE style tables, the
+% \caption command should come BEFORE the table and, given that table
+% captions serve much like titles, are usually capitalized except for words
+% such as a, an, and, as, at, but, by, for, in, nor, of, on, or, the, to
+% and up, which are usually not capitalized unless they are the first or
+% last word of the caption. Table text will default to \footnotesize as
+% the IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+%\caption{An Example of a Table}
+%\label{table_example}
+%\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+
+% Note that the IEEE does not put floats in the very first column
+% - or typically anywhere on the first page for that matter. Also,
+% in-text middle ("here") positioning is typically not used, but it
+% is allowed and encouraged for Computer Society conferences (but
+% not Computer Society journals). Most IEEE journals/conferences use
+% top floats exclusively. 
+% Note that, LaTeX2e, unlike IEEE journals/conferences, places
+% footnotes above bottom floats. This can be corrected via the
+% \fnbelowfloat command of the stfloats package.
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://mirror.ctan.org/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+% \begin{thebibliography}{1}
+% 
+% \bibitem{IEEEhowto:kopka}
+% H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%   0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+% 
+% \end{thebibliography}
 
 \bibliography{references}
 
+
+% that's all folks
 \end{document}
+
+

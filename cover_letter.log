@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.7.30)  31 JUL 2018 08:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.22)  24 OCT 2018 14:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **cover_letter.tex
 (./cover_letter.tex
 LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 32 language(s) loaded.
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2015/10/03 v3.19a KOMA-Script document class (article)
 
@@ -412,8 +412,6 @@ File: babel.def 2016/02/24 3.9q Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
@@ -482,18 +480,18 @@ tant con-tri-bu-tions for re-searchers
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./cover_letter.aux) )
  
 Here is how much of TeX's memory you used:
- 2570 strings out of 494318
- 39410 string characters out of 6163237
- 160365 words of memory out of 5000000
- 5921 multiletter control sequences out of 15000+600000
+ 2568 strings out of 493029
+ 39390 string characters out of 6136233
+ 163715 words of memory out of 5000000
+ 6128 multiletter control sequences out of 15000+600000
  5480 words of font info for 20 fonts, out of 8000000 for 9000
- 376 hyphenation exceptions out of 8191
+ 1141 hyphenation exceptions out of 8191
  41i,4n,46p,253b,122s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on cover_letter.pdf (2 pages, 57848 bytes).
+Output written on cover_letter.pdf (2 pages, 57524 bytes).
 PDF statistics:
  27 PDF objects out of 1000 (max. 8388607)
  18 compressed objects within 1 object stream

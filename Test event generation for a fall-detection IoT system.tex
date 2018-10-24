@@ -71,17 +71,17 @@
 \ead{l.lablunda@fb2.fra-uas.de}
 \author{Matthias F. Wagner\fnref{label2}}
 \ead{mfwagner@fb2.fra-uas.de}
-\author{I. Medina-Bulo\fnref{label1}}
+\author{Inmaculada Medina-Bulo\fnref{label1}}
 \ead{inmaculada.medina@uca.es}
-\address[label1]{UCASE Software Engineering Research group, University of 2. C\'adiz, Av. Universidad de 2. C\'adiz, 10, 11519 Puerto Real, Spain.}
-\address[label2]{WSN and IOT Research Group Frankfurt University of Applied Sciences.}
+\address[label1]{UCASE Software Engineering Research group, University of C\'adiz, Av. Universidad de C\'adiz, 10, 11519 Puerto Real, Spain}
+\address[label2]{WSN and IOT Research Group Frankfurt University of Applied Sciences, Nibelungenplatz 1, 60318 Frankfurt am Main, Germany}
 
 
 \begin{abstract}
 The Internet of Things (IoT) is a popular paradigm which has been applied to different areas 
 such as smart cities, medicine or business processes. One of the main drawbacks of an IoT system is the 
-amount of information they have to manage and to monitor. This information arrives as events that need 
-to be processed in real time in order to make correct decisions. The Event Processing Languages were 
+amount of information it has to manage and to monitor. This information arrives as events that need 
+to be processed in real time in order to make correct decisions. The Event Processing Languages (EPLs) were 
 designed to handle this information by defining event patterns which describe relevant situations to be 
 detected and filter the information. 
 In the majority of the relevant situations to detect, the events have a specific behaviour which must be analysed
@@ -89,7 +89,7 @@ not only to define the event patterns, but also to simulate them to test the IoT
 situations it is quite difficult to obtain test events with specific values: adverse environment conditions, 
 rise or fall in blood pressure, heart attack, falls, among others. 
 In this paper we introduce a complete study of falls as relevant situations; we show an analysis of the fall-involved
-events of two type of falls base on an IoT prototype, the event patterns to detect the falls and their test using 
+events of two types of falls based on an IoT prototype, the event patterns to detect the falls and their test using 
 the IoT-TEG (IoT - Test Event Generator) tool. The fall analysis has highlighted the necessity to improve IoT-TEG 
 with a new functionality which allows defining the desired conduct by defining behaviour rules.
 \end{abstract}
@@ -109,8 +109,8 @@ According to the survey of the \textit{Robert Koch Institute}~\cite{Varnaccia201
 group over 60 are caused by falls. Statistically, about one-third of the elderly people suffer severe lesions and the half of them suffer 
 fall-events repeatedly~\cite{Schott2008}. Falls are not caused by a single cause, 90\% of them occurred from multiple factors. These 
 factors refer to old-age or illness (intrinsic factors) or external factors e.g. hazards which occur at home, in traffic or during activities 
-of daily life (extrinsic factors)~\cite{Schott2008}. The founder of \textit{Vigilio Telemedical} reported that yearly more than 20 million 
-elderly over the age of 65 in Europe experience fall-situations, that lead to traumatic based cases of death~\cite{Vigilio,APAOTS2013}. 
+of daily life (extrinsic factors)~\cite{Schott2008}. Jean-Eric Lundy, an emergency doctor at the hospital Cochin in Paris reported that yearly more than 20 million 
+elderly over the age of 65 in Europe experience fall-situations, that lead to traumatic based cases of death~\cite{APAOTS2013}. 
 Additionally, people affected by Dementia and Parkinson have a higher risk to fall. In accordance with~\cite{Monks} research proved that 
 Dementia-patients have a 20 times higher risk and Parkinson-patients a 10 times higher risk of falling than healthy people of the same age. 
 To counteract these life-threatening situations a fast and fully automated assistance is needed, because an unconscious person may not be 
@@ -125,7 +125,7 @@ of a five sensor nodes Body Area Network (BAN)~\cite{LaBlunda.2016,LaBlunda.2016
   \label{fig:escalationscheme}
 \end{figure}
 
-The Event processing languages (EPLs) have been designed to address the main problems of 
+The EPLs have been designed to address the main problems of 
 IoT systems. In particular, EPLs are used to define critical situations in order to filter the 
 information and to make correct decisions according to the obtained data. These critical 
 situations are defined using event patterns and event rules. Among the existing EPLs, the 
@@ -133,11 +133,11 @@ EPL of EsperTech~\cite{Esper:2016} is used the most often. In our study, the cri
 so the obtained data from the mentioned prototype are used to define an EPL of EsperTech 
 pattern to detect falls.
 
-The first step of this prototype is to identify a fall from a fast movement, a sitting move or laying 
-down move, but the final goal of the system is to predict the falls and act to prevent 
+The first step of this prototype is to identify a fall from a fast movement, a sitting or laying 
+down movement, but the final goal of the system is to predict the falls and act to prevent 
 them. Given that to test this system is crucial, test events which simulate falls are necessary. In 
 the literature different type of falls can be found, and it is necessary to identify all of them in 
-order to tell them apart from a no-fall: in this study two types of falls will be analysed. 
+order to tell them apart from a non-fall: in this study, two types of falls will be analysed. 
 
 IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017} is a tool which automatically generates test events 
 of many types. Thanks to the obtained data from the sensors we have checked that the measured 
@@ -157,8 +157,8 @@ In this study of falls as relevant situations, our main contributions are:
  is the parameter that can measure the movement of the body. This parameter is analysed in order to know 
  its behaviour during two types of falls.
  \item \textbf{New definitions of two types of falls}: after the analysis of the acceleration during two 
- types of falls a new definition for each one has been done. The obtained data of the fall detection 
- prototype is used to define EPL of EsperTech patterns to detect those type of falls. 
+ types of falls a new definition for each one has been done. The obtained data of the fall-detection 
+ prototype is used to define EPL of EsperTech patterns to detect those types of falls. 
  \item \textbf{A new functionality of the IoT-TEG system} which allows to simulate the behaviour of 
  different event attributes in order to generate test events following a specific pattern. 
 \end{itemize}
@@ -166,7 +166,7 @@ In this study of falls as relevant situations, our main contributions are:
 The rest of this paper is organised as follows. Section~\ref{sec:relatedwork}
 describes not only the related work of event generators, but also the existing
 solutions for fall-detection. Section~\ref{sec:background} provides the basic
-knowledge of falls, Event Processing Languages and IoT-TEG tool. The architecture
+knowledge of falls, EPLs and IoT-TEG tool. The architecture
 of the fall detection system, the fall analysis and the IoT-TEG new functionality are 
 introduced in Section~\ref{sec:basicprototype}. Section~\ref{sec:improvedprototype}
 describes the improvements on the prototype, a new fall type analysis,
@@ -248,7 +248,7 @@ node B, (see Figure~\ref{fig:simulation}). The principle of this method differen
   \label{fig:simulation}
 \end{figure}
 
-To decrease the computational effort of the micro-controller a three-phase algorithm was proposed, which is structured 
+To decrease the computational effort of the microcontroller a three-phase algorithm was proposed, which is structured 
 as follows:
 
 \begin{enumerate}
@@ -294,7 +294,7 @@ in a 1 second window and $\alpha_{min}$ preceded $\alpha_{max}$; where $\alpha_{
 $\alpha_{min}$ is the minimum acceleration value and $1g\approx9.81m/s^{2}$. Looking at the rule an event is categorised as a fall when the 
 difference between $\alpha_{max}$ and $\alpha_{min}$ is greater than 1g and $\alpha_{min}$ is followed by $\alpha_{max}$. 
 Important: this should happen within a time window of 1 second due to the fact, that a fall can occur in less than 1 second~\cite{Luder2009}.
-To apply this rule we used the Event Processing Language (EPL) of EsperTech~\cite{Esper:2016} to integrate it in an IoT system which detects falls.
+To apply this rule we used the EPL of EsperTech~\cite{Esper:2016} to integrate it in an IoT system which detects falls.
 
 \subsection{Fall patterns with EPL of EsperTech}
 
@@ -315,8 +315,8 @@ EPL, and there are a number of styles of EPLs in use. The following styles are i
 %  based on SQL.
 % \end{itemize}
 
-The EPL in which our work is based on is EPL of Esper~\cite{Esper:2016}, a stream-oriented language. The main reasons of its selection are: 
-it is an extension of SQL, it can be embedded into Java applications and it is open source. On the other hand, it is executed by Esper, a
+The EPL our work is based on is EPL of Esper~\cite{Esper:2016}, a stream-oriented language. The main reasons of its selection are: 
+it is an extension of Structured Query Language (SQL), it can be embedded into Java applications and it is open source. On the other hand, it is executed by Esper, a
 CEP engine which can process around 500.000 events per second on a workstation, and between 70.000 and 200.000 events per second on a laptop (according to 
 the company EsperTech).
  
@@ -339,7 +339,7 @@ is needed in a stream of data events. A quick reaction is also needed in fall de
 describes this situation will be shown in the corresponding section.
  
 Because of the difficulties to simulate falls, IoT-TEG is used in
-order to get the fall test events automatically. 
+order to get the fall-test events automatically. 
 IoT-TEG can be adapted or modified, if it is necessary, to generate any test events, even after the improvements 
 in the fall-detection prototype.
 
@@ -362,9 +362,9 @@ by IoT-TEG. The generator takes the definition and generates the indicated numbe
 Previous studies suggested there were no differences in testing effectiveness between using events
 generated by IoT-TEG, or events recorded from various case studies~\cite{TesisGutierrez2017,Gutierrez2017}.
 Moreover, thanks to its implementation, IoT-TEG can be used to do different types of tests: functional,
-negative, integration, stress, etc; in deed an example of its usability can be found 
+negative, integration, stress, etc; indeed an example of its usability can be found 
 in~\cite{TesisGutierrez2017,gutierrez2018}, where IoT-TEG has been used to apply mutation 
-testing~\cite{jia2011}. These results confirm IoT-TEG can 
+testing~\cite{jia2011}. These results confirm: IoT-TEG can 
 simulate many types of events occurring in any type of applications,
 it can provide different types of tests
 and it can solve the main challenges developers face when they test event-processing programs: lack of data 
@@ -416,9 +416,9 @@ type and \texttt{entry\_id} and \texttt{temperature} are simple types.
 The system architecture is an important part to provide a precise and reliable fall-analysis. 
 Additionally, the aspect of patient compliance should be taken into consideration, because the 
 system should be developed not only from the developer point of view, but it should be accepted 
-by the patients. An important requirement of the elderly is that the hardware design should 
-facilitate the freedom of movement. Furthermore, the system should guarantee a reliable 
-functionality and a redundancy to protect the wearable system against
+by the patients. An important requirement of the elderly is that the hardware design must 
+facilitate the freedom of movement. Furthermore, the system has to guarantee a reliable 
+functionality and redundancy to protect the wearable system against
 a total system failure. J{\"a}ms{\"a} et al.~\cite{jamsa2014fall} state that the best
 position of an accelerometer is near the waist.
 With reference to these aspects a BAN in form of a belt was developed which 
@@ -458,9 +458,9 @@ of the system must be ensured, in case one of the nodes fails. Using
 the architecture shown above (see Figure \ref{fig:belt}),  
 a mirroring of the opposing sensors is achieved with identical sensor values, only with different signs. 
 In case a node fails, the opposite value can be taken as a reference to detect a possible fall. The other reason for 
-applying the proposed architecture is that it significantly improves the accuracy of our system. Taking into 
-consideration the following illustration the proposed belt architecture
-(see Figure \ref{fig:axisreference}) facilitates the recognition of several fall-types.
+applying the proposed architecture is that it significantly improves
+the accuracy of our system compared to earlier designs \cite{LuigiMasterThesis}. Taking into 
+consideration the following illustration (see Figure \ref{fig:axisreference}) the proposed belt architecture facilitates the recognition of several fall-types.
 
 \begin{figure}[!ht]
   \centering
@@ -472,7 +472,7 @@ consideration the following illustration the proposed belt architecture
 The special positioning of the nodes on the belt results in a more precise fall-characterisation. Considering 
 the event that a person does a left rotation and suffers a frontal impact to the ground (forward fall), 
 the gyroscope information (single values $\omega_{i}, i \in \{x,y,z\}$) could be used for the detection of rotation and the 
-acceleration magnitude $|\alpha|$ to detect the impact to the ground, see equation (\ref{eq:acel}), Section~\ref{subsec:analysis}.
+acceleration magnitude $|\alpha|$ to detect the impact to the ground, see Equation (\ref{eq:acel}), Section~\ref{subsec:analysis}.
 
 To test the system's accuracy different fall-types were reproduced with several test people. A 
 test procedure based on Li et al.~\cite{Li2009} and Pannurat et al.~\cite{Pannurat2014} was developed which includes 
@@ -493,9 +493,9 @@ the EPL of EsperTech pattern to define the fall situation is the one shown in th
  \end{lstlisting}
 
 The illustrated EPL query is based on the physical principle depicted in 
-Figure \ref{fig:grafica}. Important to know is that for EPL query two nodes 
+Figure \ref{fig:grafica}. Important to know is that for the EPL query two nodes 
 were used (one frontal sensor node \& one lateral sensor node) to apply the 
-fall-detection, but in future this query will be extended to four sensor nodes. 
+fall-detection, but in the future this query will be extended to four sensor nodes. 
 The four node architecture (see Figure \ref{fig:belt}) is currently only used 
 for redundancy purposes. With the \textit{select} statement the event properties 
 are selected to create a pattern for fall-detection. In the given example the
@@ -511,8 +511,7 @@ following event properties are selected:
 Taking into consideration the selected event properties the query checks if the 
 starting acceleration of sensor node 1 is $<=$ 9.81 m/s$^2$ which means the person 
 is in a stationary position in which the earth's gravity of 1g (9,81 m/$s^2$) acts 
-on the body. Additionally the subsequent acceleration of the first node checks if the 
-subtraction of the subsequent acceleration and the first acceleration within a 
+on the body. Additionally, the subsequent acceleration of the first node checks if the subtraction of the subsequent acceleration and the first acceleration within a 
 time window of 1 second is $>=$ 9.81 m/$s^2$ which means that the patient has 
 suffered an impact to the ground. Using the \textit{OR} disjunction the second 
 sensor node can be added and the statement is able to detect a fall in case one 
@@ -549,7 +548,8 @@ sensor pressure because of an impact or the person is laying over it, etc.
 \end{figure*}
 
 \subsubsection*{2. Fall identification and analysis} After the previous study, the peaks of the acceleration are identified. 
-These peaks, or maximum values, are when the sensor suffers the impact. Because the mentioned noise, two ranges of the obtained 
+These peaks, or maximum values, are when the sensor suffers the
+impact. Because of the mentioned noise, two ranges of the obtained 
 values are extracted in order to analyse data properly. Please, see the highlighted parts in Figure~\ref{fig:Sensor1Sombras};
 with respect to the X-axis $[210, 360]$ (Fall 1) and $[900, 1050]$ (Fall 2). The range of extracted values are a set of data that 
 happen in less than a time window of 1 second, to meet the fact described in~\cite{Luder2009}. So as to compare both RBF falls
@@ -584,7 +584,8 @@ see Section~\ref{subsec:analysis}.
 
 The goal is to simulate this type of fall with events to test the IoT system, so we have to analyse the values of 
 the acceleration before and after the impact. Taking into account that the maximum value of the acceleration is 
-when the impact occurs ($\alpha_{max}$), the acceleration behaviour during a RBF fall consists on:
+when the impact occurs ($\alpha_{max}$), the acceleration behaviour
+during a RBF fall develops as follows:
 \begin{enumerate}
  \item from a value less than the half of $\alpha_{max}$, the acceleration value increases to obtain a value in the range:
   \begin{center}
@@ -632,12 +633,13 @@ Taking into consideration that the RBF fall is a complex event to detect, this e
 \end{itemize}
 
 The EPL query first checks if the starting acceleration \texttt{a1.accelS1} is $<=$ 9.81m/$s^2$ which means that the person is laying 
-on the bed (stationary position). Additionally the subsequent property is checked. If the difference between the successive 
+on the bed (stationary position). Additionally, the subsequent property is checked. If the difference between the successive 
 acceleration value (\texttt{a2.accelS1}) and the previous one (\texttt{a1.accelS1}) is $>=$ 9.81 m/$s^2$ then the person has a transition to 
 the rolling phase. If the person is falling after turning, the subsequent acceleration value should be $<$ 9.81 m/$s^2$ 
 which means that the person is in the free fall phase. Additionally, if the difference between the current acceleration value 
-(\texttt{a4.accelS1}) and the previous one (\texttt{a3.accelS1}) is $>=$ 9.81 m/$s^2$, it is an indication for a fall. So that the query 
-recognises this event as a fall all these sequences should happen within a time window of 1 second.
+(\texttt{a4.accelS1}) and the previous one (\texttt{a3.accelS1}) is
+$>=$ 9.81 m/$s^2$, it is an indication for a fall. For a query to
+recognise this event as a fall all these sequences should happen within a time window of 1 second.
 
 \subsubsection*{3. To define the fall event} Once the fall acceleration behaviour has been observed, the next step is to define the 
 fall event in order to generate test events with IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017}. As it was explained in 
@@ -724,7 +726,8 @@ is established in a range which is lower than \texttt{Roll}.
   </custom_conditions>
 \end{lstlisting}
 
-It is needed to highlight that to obtain these rules to define the behaviour of the acceleration several test
+It has to be emphasised that to obtain these rules for the definition
+of the acceleration behaviour several tests
 have been done. Once we obtained the desired results, test events were generated as they were necessary. The 
 Figure~\ref{fig:IoTTEGRBFGeneratedEvents} shows the acceleration values of some of the generated RBF falls using
 IoT-TEG and the new functionality.
@@ -750,22 +753,22 @@ section significant improvements were done. The improved hardware architecture i
 based on four sensor nodes (S1-S4), but with the following significant innovations:
 
 \begin{itemize}
- \item A new hardware platform which is based on Arduino Primo Core~\cite{Arduino2018}. 
- This micro-controller provides built-in sensors and a Bluetooth Low Energy (BLE) 
+ \item A new hardware platform which is based on Arduino Primo Core~\cite{Arduino2018}: 
+ This microcontroller provides built-in sensors and a Bluetooth Low Energy (BLE) 
  interface for wireless data transmission. This satisfies the
  requiremnent of patient compliance
- which includes the mobility of movement.
+ which includes unrestricted movement.
  \item A different power supply mode is used for the improved prototype. Instead of 
  using the Lithium Polymer (LIPO) batteries, the Arduino Primo Core is supplied by a 
  coin cell. This is an important aspect due to the fact, that exposing the LIPO-batteries 
  to permanent shocks will damage them and drastically shorten their lifespan. 
- Additionally with the usage of coin cells, we have reached a lifespan of 2 to 3 weeks 
+ Additionally, with the usage of coin cells, we have reached a lifespan of 2 to 3 weeks 
  without exchanging the battery.
- \item The improved Prototype is using BLE for wireless data transmission. Using BLE 
+ \item The improved prototype is using BLE for wireless data transmission. Using BLE 
  brings the advantage to build up a communication infrastructure with the smartphone 
  to automatically inform the emergency services without any additional hardware.
  \item The dataset which is sent by the sensor nodes (S1- S4) is composed as follows 
- and includes the values unit m/$s^2$:
+ and includes the values of $\alpha_{i}, i \in {x,y,z}$ in unit $m/s^{2}$:
  \begin{center}
   \texttt{SensorID, X-Acceleration, Y-Acceleration, Z-Acceleration}
  \end{center}
@@ -786,14 +789,15 @@ based on four sensor nodes (S1-S4), but with the following significant innovatio
 The second fall to generate the test events consists on the impact of the person with 
 a wall and falling on the knees and then on the chest: \textit{fall against wall} (FAW). 
 In this study we have used two healthy subjects, and we have recorded falls with all 
-possible realism while also trying to avoid risks. They have been doing fall test for a period 
+possible realism while also trying to avoid risks. They have been doing fall-tests for a period 
 of 2 minutes, the FAW fall type. The analysed data and videos can be found in ~\cite{FallRepo}.
 
 In this analysis the same steps that the ones described in Section~\ref{sec:basicprototype} 
 have been done:
 
 \subsubsection*{Study of the values} Given that the sensor 1 is the one that suffers the 
-impact, its acceleration values are the first to be analysed. The acceleration values have 
+impact, its acceleration values $|\alpha|$ are the first to be
+analysed. The acceleration values $|\alpha|$ have 
 been normalised ($N(m/s^2)$). After the normalisation the impacts of the falls, peaks, 
 have to be detected; we have considered a peak when the normalised acceleration is 
 greater than 0,7 ($N(m/s^2) > 0,7$). After applying the previous rule in all the fall data 
@@ -818,7 +822,7 @@ acceleration value during one FAW fall of person 1 and person 2.
 The first and fourth columns of the Table~\ref{tabla:FAW} represent
 the seconds ($s$) and milliseconds 
 ($ms$) when the acceleration was measured. The second and fifth columns show the acceleration 
-values ($m/s^2$) and in the third and sixth columns are deployed the normalised acceleration values 
+values $|\alpha|$  ($m/s^2$) and in the third and sixth columns are deployed the normalised acceleration values 
 ($N(m/s^2)$) according to the fall maximum value. In Figure~\ref{fig:FAWcomparison} a comparison 
 of the normalised acceleration behaviour during the previous FAW falls of person 1 and person 2 is 
 shown. These comparisons show a similar behaviour of the acceleration during the FAW fall.
@@ -887,9 +891,9 @@ This event has been divided in the following phases:
 
 The EPL query checks if the starting acceleration \texttt{a1.accelS1} is $>=$ 9.81 m/$s^2$ which means that the person is walking. 
 The next acceleration value (\texttt{a2.accelS1}) is used to detect the free fall phase to the wall. If \texttt{a2.accelS1} 
-is $<$ 9.81 m/$s^2$ it indicates that the person is falling against the fall. Additionally if the difference between 
+is $<$ 9.81 m/$s^2$ it indicates that the person is falling against the fall. Additionally, if the difference between 
 the current acceleration value (\texttt{a3.accelS1}) and the previous acceleration value (\texttt{a2.accelS1}) is $>=$ 9.81 m/$s^2$ 
-it indicates the impact against a wall. After that the person suffered the impact against a wall the upcoming 
+it indicates the impact against a wall. After that, the person suffered the impact against a wall the upcoming 
 acceleration value (\texttt{a4.accelS1}) should be less than 9.81 m/$s^2$. This indicates that the person is falling to 
 the ground. If the difference between the successive value (\texttt{a5.accelS1}) and the previous value (\texttt{a4.accelS1}) 
 is $>=$ 9.81 m/$s^2$ it means that the person has suffered an impact to the ground. To classify this event as 
@@ -953,7 +957,7 @@ in the wall (third rule), which happens after the person is walking, something d
 The fourth and sixth rules contain a reference to \texttt{Impact}, the impact on the ground (fifth rule), which happen
 after the person is falling and the person is laying on the floor, fourth and sixth rules.
 
-It is important to highlight that to obtain these rules to define the behaviour of the normalised acceleration several test
+It is important to highlight that to obtain these rules to define the behaviour of the normalised acceleration several tests
 have been done. Once we obtained the desired results, test events were generated as they were necessary. The 
 Figure~\ref{fig:IoTTEGFAWGeneratedEvents} shows the acceleration values of some of the generated FAW falls using
 IoT-TEG and the new functionality.
@@ -966,7 +970,7 @@ IoT-TEG and the new functionality.
 \end{figure}
 
 The generated events which simulate FAW falls follow the pattern of the acceleration during a FAW fall.
-So, these generated events can be used to test the fall detection system.
+So, these generated events can be used to test the fall-detection system.
 
 The improvements in the new prototype are encouraging. They affect not only in the way of obtaining the data, but 
 also in the format and their values. The impact values from one analysis to the other are quite different, 
@@ -979,7 +983,7 @@ so IoT-TEG is not limited.
 \subsection{Detected problems}
 \label{sub:detectedproblems}
 
-After testing the current fall detection prototype, some problems were 
+After testing the current fall-detection prototype, some problems were 
 found. Moreover, some considerations will be applied in future tests.
 
 First of all, we are going to explain the problems related to the prototype: 
@@ -1018,8 +1022,7 @@ First of all, we are going to explain the problems related to the prototype:
  the amount of data, but also in the time.
  
  \item Some sensors transmit more data than the others, i.e. the sensors are not 
- sending the same amount of data, even sometimes there is no data. The four sensors were working while the FAW fall
- simulation, but the obtained acceleration values were from three of them, one of the sensor does not transmit data 
+ sending the same amount of data, even sometimes there is no data. The four sensors were working while the FAW fall-simulation, but the obtained acceleration values were from three of them, one of the sensor did not transmit data 
  in one moment of the simulation, see Figure~\ref{fig:synchronisation2}.
  
  \begin{figure}[!ht]
@@ -1035,7 +1038,7 @@ duration of the battery is around 2 or 3 weeks, it depends on its use. If we wan
 specially with elderly people, or people that need special treatment, we have to increase the duration of the battery 
 in order to change it as little as possible.
 
-The analysis has revealed that while we were studying the acceleration data test, some of its values could be misinterpreted.
+The analysis has revealed that while we were studying the acceleration data tests, some of its values could be misinterpreted.
 This is because the test person that is falling for the simulation, stands up very fast. Given that we have been cautious
 in our analysis and we have been checking not only the values but also the videos and matching them, we have detected
 this issue. So, in our future tests, the test person should wait at least 2 seconds laying on the floor 
@@ -1044,17 +1047,20 @@ person falls and stands up this means that the person
 is conscious and is able to move and call to the emergency services, if it is necessary. On the contrary, if the person
 falls and does not stand up this means that maybe the person is unconscious or is not able to move and call the emergency
 services. Therefore, waiting at least 2 seconds between falls in our test scenarios, will help not only to understand 
-better the behaviour of the acceleration values but also to do a better fall simulation.
+better the behaviour of the acceleration values but also to do a better fall-simulation.
 
 Comparing the measured values of the fall-events (forward fall, fall against wall and rolling out of bed) of the two 
 prototypes, it can be determined that the measured impact values of the first prototype are considerably higher than 
 those of the improved solution. This difference is caused by multiple reasons. The main reason is the different 
 experimental set-up of the first prototype and the improved solution. The hardware design of the first prototype is 
 bulky compared to the improved one. Due to the bulky construction the sensor nodes are more exposed to vibrations and 
-shocks, which results in higher impact values. Additionally the sensor nodes shifted during the fall. The result was 
+shocks, which results in higher impact values. Additionally, the sensor nodes shifted during the fall. The result was 
 that the test person repositioned the sensor nodes which leads to influence the impact value (acceleration magnitude). 
-Taking into consideration this aspect, a smaller micro-controller platform was used to solve this problem which was introduced in  section \ref{sec:improvedprototype}. Despite the design differences in the two prototypes, 
-we are able to compare fall types.
+Taking this aspect into consideration, a smaller microcontroller
+platform, which was described in \ref{sec:improvedprototype}, was used
+to solve this problem. Despite the design differences in the two
+prototypes,  
+we are able to compare fall-types.
 
 \section{Conclusions and Future Work}
 \label{sec:conclusions}
@@ -1068,10 +1074,10 @@ it was developed as a tool to generate test events for any system
 which manages events and needs to be tested.
 
 According to the falls, we have detected the necessity to define the
-EPL query for each fall type in the literature; this will
+EPL query for each fall-type in the literature; this will
 help to identify a fall from a no-fall. Moreover, it will be
-interesting to add different types of sensors such as air 
-pressure, and medical data such as ECG, in order to identify and characterise the falls.
+interesting to add different types of sensors such as an air 
+pressure sensor, and medical data such as ECG, in order to identify and characterise the falls.
 
 The main future work is to improve the IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017} tool in order to generate faithful 
 test events which simulate the 
@@ -1095,14 +1101,14 @@ based microcontroller platform is planned, which facilitates the
 synchronisation of the sensor nodes using a  
 priority-controlled task scheduler. In addition, the battery lifespan
 should be extended and the hardware design of the  
-prototype should be small as possible so that patients are not
+prototype should be as small as possible so that patients are not
 restricted in their movements.
 
 After studying the work of J{\"a}ms{\"a} et al.~\cite{jamsa2014fall}
 we are going to include in our future work the analysis of 
 the different postures after the fall. 
 
-Fall detection systems are safety critical. Therefore, new developments will include hazard analysis methods
+Fall-detection systems are safety critical. Therefore, new developments will include hazard analysis methods
 to satisfy safety standards, i.e. IEC61508, IEC60601, etc.
 
 \section*{Acknowledgment}

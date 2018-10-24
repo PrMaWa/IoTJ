@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.9.4)  22 OCT 2018 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.22)  24 OCT 2018 10:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -568,7 +568,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<img/Figure1.png, id=84, 1204.5pt x 773.289pt>
+<img/Figure1.png, id=83, 1204.5pt x 773.289pt>
 File: img/Figure1.png Graphic file (type png)
  <use img/Figure1.png>
 Package pdftex.def Info: img/Figure1.png used on input line 123.
@@ -582,7 +582,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 153.
- [3 <./img/Figure1.png>] [4] [5] <img/BasePrototype.png, id=148, 810.02625pt x 
+ [3 <./img/Figure1.png>] [4] [5] <img/BasePrototype.png, id=146, 810.02625pt x 
 754.31813pt>
 File: img/BasePrototype.png Graphic file (type png)
 
@@ -590,7 +590,7 @@ File: img/BasePrototype.png Graphic file (type png)
 Package pdftex.def Info: img/BasePrototype.png used on input line 246.
 (pdftex.def)             Requested size: 121.49869pt x 113.14284pt.
  [6 <./img/BasePrototype.png>]
-<img/FallGraph.png, id=162, 283.0575pt x 226.59656pt>
+<img/FallGraph.png, id=160, 283.0575pt x 226.59656pt>
 File: img/FallGraph.png Graphic file (type png)
  <use img/FallGraph.png>
 Package pdftex.def Info: img/FallGraph.png used on input line 282.
@@ -609,7 +609,7 @@ Overfull \hbox (1.80768pt too wide) in paragraph at lines 331--332
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[8] <./img/IoT-EGArquitecture.png, id=197, 245.718pt x 327.624pt>
+[8] <./img/IoT-EGArquitecture.png, id=195, 245.718pt x 327.624pt>
 File: ./img/IoT-EGArquitecture.png Graphic file (type png)
 
 <use ./img/IoT-EGArquitecture.png>
@@ -622,26 +622,26 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 ) [10]
-<./img/belt.png, id=238, 966.812pt x 342.881pt>
+<./img/belt.png, id=236, 967.6953pt x 342.5598pt>
 File: ./img/belt.png Graphic file (type png)
  <use ./img/belt.png>
 Package pdftex.def Info: ./img/belt.png used on input line 429.
-(pdftex.def)             Requested size: 241.70241pt x 85.72003pt.
- [11 <./img/belt.png>] <./img/axis.png, id=254, 1115.66812pt x 936.49875pt>
+(pdftex.def)             Requested size: 241.92323pt x 85.63972pt.
+ [11 <./img/belt.png>] <./img/axis.png, id=253, 1115.66812pt x 936.49875pt>
 File: ./img/axis.png Graphic file (type png)
 
 <use ./img/axis.png>
 Package pdftex.def Info: ./img/axis.png used on input line 467.
 (pdftex.def)             Requested size: 223.12967pt x 187.29643pt.
  [12 <./img/axis.png>] [13] [14]
-<img/Sensor1Sombras.png, id=303, 1359.479pt x 497.86pt>
+<img/Sensor1Sombras.png, id=302, 1359.479pt x 497.86pt>
 File: img/Sensor1Sombras.png Graphic file (type png)
 
 <use img/Sensor1Sombras.png>
-Package pdftex.def Info: img/Sensor1Sombras.png used on input line 546.
+Package pdftex.def Info: img/Sensor1Sombras.png used on input line 545.
 (pdftex.def)             Requested size: 346.67293pt x 126.9564pt.
 
-Overfull \hbox (1.67293pt too wide) in paragraph at lines 546--547
+Overfull \hbox (1.67293pt too wide) in paragraph at lines 545--546
 [][] 
  []
 
@@ -698,12 +698,12 @@ Package pdftex.def Info: img/Comparativa.png used on input line 580.
 (pdftex.def)             Requested size: 242.9069pt x 142.53215pt.
 
 [16 <./img/Comparativa.png>] [17] [18] [19] [20]
-<img/IoTTEGRBFGeneratedEvents.png, id=374, 811.03pt x 476.78125pt>
+<img/IoTTEGRBFGeneratedEvents.png, id=373, 811.03pt x 476.78125pt>
 File: img/IoTTEGRBFGeneratedEvents.png Graphic file (type png)
 
 <use img/IoTTEGRBFGeneratedEvents.png>
 Package pdftex.def Info: img/IoTTEGRBFGeneratedEvents.png used on input line 73
-4.
+7.
 (pdftex.def)             Requested size: 243.31087pt x 143.03548pt.
  [21] [22 <./img/IoTTEGRBFGeneratedEvents.png>] [23] (./table-FAW.tex
 Overfull \hbox (5.4335pt too wide) in paragraph at lines 28--28
@@ -750,20 +750,20 @@ Overfull \hbox (10.62125pt too wide) in alignment at lines 28--28
 [][][][][][] 
  []
 
-) <img/TwoFallsComparative.png, id=417, 1115.16624pt x 662.475pt>
+) <img/TwoFallsComparative.png, id=416, 1115.16624pt x 662.475pt>
 File: img/TwoFallsComparative.png Graphic file (type png)
 
 <use img/TwoFallsComparative.png>
-Package pdftex.def Info: img/TwoFallsComparative.png used on input line 828.
+Package pdftex.def Info: img/TwoFallsComparative.png used on input line 832.
 (pdftex.def)             Requested size: 223.0293pt x 132.49265pt.
  [24] [25 <./img/TwoFallsComparative.png>]
 [26] [27] [28]
-<img/IoTTEGFAWGeneratedEvents.png, id=490, 1159.33125pt x 678.535pt>
+<img/IoTTEGFAWGeneratedEvents.png, id=489, 1159.33125pt x 678.535pt>
 File: img/IoTTEGFAWGeneratedEvents.png Graphic file (type png)
 
 <use img/IoTTEGFAWGeneratedEvents.png>
 Package pdftex.def Info: img/IoTTEGFAWGeneratedEvents.png used on input line 96
-3.
+7.
 (pdftex.def)             Requested size: 231.86214pt x 135.70459pt.
  [29] [30 <./img/IoTTEGFAWGeneratedEvents.png>] (./table-Synchro.tex
 Overfull \hbox (5.4335pt too wide) in paragraph at lines 40--40
@@ -814,18 +814,18 @@ Overfull \hbox (10.62125pt too wide) in alignment at lines 40--40
 File: img/synchronisation1.png Graphic file (type png)
 
 <use img/synchronisation1.png>
-Package pdftex.def Info: img/synchronisation1.png used on input line 1011.
+Package pdftex.def Info: img/synchronisation1.png used on input line 1015.
 (pdftex.def)             Requested size: 234.2711pt x 141.12474pt.
-
-<img/synchronisation2.png, id=507, 1059.96pt x 619.31375pt>
+ [31]
+<img/synchronisation2.png, id=512, 1059.96pt x 619.31375pt>
 File: img/synchronisation2.png Graphic file (type png)
 
 <use img/synchronisation2.png>
-Package pdftex.def Info: img/synchronisation2.png used on input line 1027.
+Package pdftex.def Info: img/synchronisation2.png used on input line 1030.
 (pdftex.def)             Requested size: 233.19191pt x 136.24944pt.
- [31 <./img/synchronisation1.png>] [32] [33 <./img/synchronisation2.png>] [34]
+ [32 <./img/synchronisation1.png> <./img/synchronisation2.png>] [33] [34]
 (./Test event generation for a fall-detection IoT system.bbl [35]
-Underfull \hbox (badness 10000) in paragraph at lines 46--48
+Underfull \hbox (badness 10000) in paragraph at lines 41--43
 []\OT1/cmr/m/n/10 EsperTech, Es-pertech web-site, []$\OT1/cmtt/m/n/10 http : / 
 / www . espertech . com / esper /
  []
@@ -849,29 +849,28 @@ Missing character: There is no © in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-[36]
 Missing character: There is no Å in font cmr10!
 Missing character: There is no „ in font cmr10!
 
-Underfull \hbox (badness 4024) in paragraph at lines 74--77
+Underfull \hbox (badness 4024) in paragraph at lines 69--72
 []\OT1/cmr/m/n/10 IoT-Analytics, White pa-per - iot plat-forms - the cen-tral b
 ack-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--77
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
 \OT1/cmr/m/n/10 bone for the in-ter-net of things, []$\OT1/cmtt/m/n/10 https : 
 / / iot-[]analytics . com /
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 []\OT1/cmr/m/n/10 Micro[]Research[]Finland[]Oy, Event gen-er-a-tor, []$\OT1/cmt
 t/m/n/10 http : / / www . mrf . fi /
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 87--89
+Underfull \hbox (badness 1584) in paragraph at lines 82--84
 []\OT1/cmr/m/n/10 Oracle, In-tro-duc-ing the we-blogic in-te-gra-tion ad-min-is
 -tra-tion con-sole,
  []
@@ -884,38 +883,33 @@ Missing character: There is no ± in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [38]
-Underfull \hbox (badness 10000) in paragraph at lines 166--168
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--163
 []\OT1/cmr/m/n/10 Arduino, Ar-duino web-site, []$\OT1/cmtt/m/n/10 https : / / w
 ww . arduino . cc / en / Guide /
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1118.
- [39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1118.
- (./Test event generation for a fall-detection IoT system.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1118.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1118.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1124.
+ [38]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1124.
+ (./Test event generation for a fall-detection IoT system.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1124.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1124.
 
 Package rerunfilecheck Info: File `"Test event generation for a fall-detection 
 IoT system".out' has not changed.
 (rerunfilecheck)             Checksum: 47EC3EDFA8749649265488011D91221C;862.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1118.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1124.
  ) 
 Here is how much of TeX's memory you used:
- 10331 strings out of 493029
- 144355 string characters out of 6136235
- 260475 words of memory out of 5000000
- 13461 multiletter control sequences out of 15000+600000
+ 10324 strings out of 493029
+ 144256 string characters out of 6136233
+ 259489 words of memory out of 5000000
+ 13456 multiletter control sequences out of 15000+600000
  12077 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,18n,51p,518b,1242s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,18n,51p,518b,1758s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
@@ -933,10 +927,10 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
 Output written on "Test event generation for a fall-detection IoT system.pdf" (
-39 pages, 1652952 bytes).
+38 pages, 1713237 bytes).
 PDF statistics:
- 700 PDF objects out of 1000 (max. 8388607)
- 607 compressed objects within 7 object streams
- 217 named destinations out of 1000 (max. 500000)
+ 689 PDF objects out of 1000 (max. 8388607)
+ 598 compressed objects within 6 object streams
+ 215 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

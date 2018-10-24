@@ -10,36 +10,36 @@ Warning--empty year in Kozina
 Warning--empty journal in Luder2009
 Warning--empty journal in colladomachine
 Warning--empty publisher in colladoTriaxal
-You've used 31 entries,
+You've used 30 entries,
             2937 wiz_defined-function locations,
-            866 strings with 11511 characters,
-and the built_in function-call counts, 8064 in all, are:
-= -- 725
-> -- 270
+            862 strings with 11338 characters,
+and the built_in function-call counts, 7896 in all, are:
+= -- 712
+> -- 266
 < -- 8
-+ -- 110
-- -- 79
-* -- 443
-:= -- 1072
-add.period$ -- 37
-call.type$ -- 31
-change.case$ -- 30
++ -- 108
+- -- 78
+* -- 441
+:= -- 1052
+add.period$ -- 36
+call.type$ -- 30
+change.case$ -- 29
 chr.to.int$ -- 6
-cite$ -- 38
-duplicate$ -- 268
-empty$ -- 971
-format.name$ -- 97
-if$ -- 2166
+cite$ -- 37
+duplicate$ -- 262
+empty$ -- 945
+format.name$ -- 96
+if$ -- 2117
 int.to.chr$ -- 0
-int.to.str$ -- 31
+int.to.str$ -- 30
 missing$ -- 23
-newline$ -- 108
-num.names$ -- 31
-pop$ -- 246
+newline$ -- 105
+num.names$ -- 30
+pop$ -- 239
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 614
+skip$ -- 595
 stack$ -- 0
 substring$ -- 229
 swap$ -- 68
@@ -48,7 +48,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 7
-while$ -- 52
-width$ -- 33
-write$ -- 264
+while$ -- 51
+width$ -- 32
+write$ -- 257
 (There were 7 warnings)

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.22)  24 OCT 2018 10:22
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.22)  22 OCT 2018 19:04
+>>>>>>> 1b50acd0a239236507af5de3601e71804a2790ef
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -627,13 +631,18 @@ File: ./img/belt.png Graphic file (type png)
  <use ./img/belt.png>
 Package pdftex.def Info: ./img/belt.png used on input line 429.
 (pdftex.def)             Requested size: 241.92323pt x 85.63972pt.
+<<<<<<< HEAD
  [11 <./img/belt.png>] <./img/axis.png, id=253, 1115.66812pt x 936.49875pt>
+=======
+ [11 <./img/belt.png>] <./img/axis.png, id=252, 1115.66812pt x 936.49875pt>
+>>>>>>> 1b50acd0a239236507af5de3601e71804a2790ef
 File: ./img/axis.png Graphic file (type png)
 
 <use ./img/axis.png>
-Package pdftex.def Info: ./img/axis.png used on input line 467.
+Package pdftex.def Info: ./img/axis.png used on input line 466.
 (pdftex.def)             Requested size: 223.12967pt x 187.29643pt.
  [12 <./img/axis.png>] [13] [14]
+<<<<<<< HEAD
 <img/Sensor1Sombras.png, id=302, 1359.479pt x 497.86pt>
 File: img/Sensor1Sombras.png Graphic file (type png)
 
@@ -642,6 +651,16 @@ Package pdftex.def Info: img/Sensor1Sombras.png used on input line 545.
 (pdftex.def)             Requested size: 346.67293pt x 126.9564pt.
 
 Overfull \hbox (1.67293pt too wide) in paragraph at lines 545--546
+=======
+<img/Sensor1Sombras.png, id=301, 1359.479pt x 497.86pt>
+File: img/Sensor1Sombras.png Graphic file (type png)
+
+<use img/Sensor1Sombras.png>
+Package pdftex.def Info: img/Sensor1Sombras.png used on input line 544.
+(pdftex.def)             Requested size: 346.67293pt x 126.9564pt.
+
+Overfull \hbox (1.67293pt too wide) in paragraph at lines 544--545
+>>>>>>> 1b50acd0a239236507af5de3601e71804a2790ef
 [][] 
  []
 
@@ -691,19 +710,27 @@ Overfull \hbox (12.28012pt too wide) in alignment at lines 23--23
  []
 
 ) [15 <./img/Sensor1Sombras.png>]
-<img/Comparativa.png, id=318, 485.815pt x 285.065pt>
+<img/Comparativa.png, id=316, 485.815pt x 285.065pt>
 File: img/Comparativa.png Graphic file (type png)
  <use img/Comparativa.png>
-Package pdftex.def Info: img/Comparativa.png used on input line 580.
+Package pdftex.def Info: img/Comparativa.png used on input line 578.
 (pdftex.def)             Requested size: 242.9069pt x 142.53215pt.
 
 [16 <./img/Comparativa.png>] [17] [18] [19] [20]
+<<<<<<< HEAD
 <img/IoTTEGRBFGeneratedEvents.png, id=373, 811.03pt x 476.78125pt>
+=======
+<img/IoTTEGRBFGeneratedEvents.png, id=372, 811.03pt x 476.78125pt>
+>>>>>>> 1b50acd0a239236507af5de3601e71804a2790ef
 File: img/IoTTEGRBFGeneratedEvents.png Graphic file (type png)
 
 <use img/IoTTEGRBFGeneratedEvents.png>
 Package pdftex.def Info: img/IoTTEGRBFGeneratedEvents.png used on input line 73
+<<<<<<< HEAD
 7.
+=======
+2.
+>>>>>>> 1b50acd0a239236507af5de3601e71804a2790ef
 (pdftex.def)             Requested size: 243.31087pt x 143.03548pt.
  [21] [22 <./img/IoTTEGRBFGeneratedEvents.png>] [23] (./table-FAW.tex
 Overfull \hbox (5.4335pt too wide) in paragraph at lines 28--28
@@ -750,6 +777,7 @@ Overfull \hbox (10.62125pt too wide) in alignment at lines 28--28
 [][][][][][] 
  []
 
+<<<<<<< HEAD
 ) <img/TwoFallsComparative.png, id=416, 1115.16624pt x 662.475pt>
 File: img/TwoFallsComparative.png Graphic file (type png)
 
@@ -759,11 +787,26 @@ Package pdftex.def Info: img/TwoFallsComparative.png used on input line 832.
  [24] [25 <./img/TwoFallsComparative.png>]
 [26] [27] [28]
 <img/IoTTEGFAWGeneratedEvents.png, id=489, 1159.33125pt x 678.535pt>
+=======
+) <img/TwoFallsComparative.png, id=415, 1115.16624pt x 662.475pt>
+File: img/TwoFallsComparative.png Graphic file (type png)
+
+<use img/TwoFallsComparative.png>
+Package pdftex.def Info: img/TwoFallsComparative.png used on input line 826.
+(pdftex.def)             Requested size: 223.0293pt x 132.49265pt.
+ [24] [25 <./img/TwoFallsComparative.png>]
+[26] [27] [28]
+<img/IoTTEGFAWGeneratedEvents.png, id=488, 1159.33125pt x 678.535pt>
+>>>>>>> 1b50acd0a239236507af5de3601e71804a2790ef
 File: img/IoTTEGFAWGeneratedEvents.png Graphic file (type png)
 
 <use img/IoTTEGFAWGeneratedEvents.png>
 Package pdftex.def Info: img/IoTTEGFAWGeneratedEvents.png used on input line 96
+<<<<<<< HEAD
 7.
+=======
+1.
+>>>>>>> 1b50acd0a239236507af5de3601e71804a2790ef
 (pdftex.def)             Requested size: 231.86214pt x 135.70459pt.
  [29] [30 <./img/IoTTEGFAWGeneratedEvents.png>] (./table-Synchro.tex
 Overfull \hbox (5.4335pt too wide) in paragraph at lines 40--40
@@ -810,10 +853,11 @@ Overfull \hbox (10.62125pt too wide) in alignment at lines 40--40
 [][][][][][] 
  []
 
-) <img/synchronisation1.png, id=505, 1171.37625pt x 705.63625pt>
+) <img/synchronisation1.png, id=503, 1171.37625pt x 705.63625pt>
 File: img/synchronisation1.png Graphic file (type png)
 
 <use img/synchronisation1.png>
+<<<<<<< HEAD
 Package pdftex.def Info: img/synchronisation1.png used on input line 1015.
 (pdftex.def)             Requested size: 234.2711pt x 141.12474pt.
  [31]
@@ -822,6 +866,16 @@ File: img/synchronisation2.png Graphic file (type png)
 
 <use img/synchronisation2.png>
 Package pdftex.def Info: img/synchronisation2.png used on input line 1030.
+=======
+Package pdftex.def Info: img/synchronisation1.png used on input line 1009.
+(pdftex.def)             Requested size: 234.2711pt x 141.12474pt.
+
+<img/synchronisation2.png, id=505, 1059.96pt x 619.31375pt>
+File: img/synchronisation2.png Graphic file (type png)
+
+<use img/synchronisation2.png>
+Package pdftex.def Info: img/synchronisation2.png used on input line 1024.
+>>>>>>> 1b50acd0a239236507af5de3601e71804a2790ef
 (pdftex.def)             Requested size: 233.19191pt x 136.24944pt.
  [32 <./img/synchronisation1.png> <./img/synchronisation2.png>] [33] [34]
 (./Test event generation for a fall-detection IoT system.bbl [35]
@@ -851,7 +905,11 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 Missing character: There is no Å in font cmr10!
 Missing character: There is no „ in font cmr10!
+<<<<<<< HEAD
 
+=======
+[36]
+>>>>>>> 1b50acd0a239236507af5de3601e71804a2790ef
 Underfull \hbox (badness 4024) in paragraph at lines 69--72
 []\OT1/cmr/m/n/10 IoT-Analytics, White pa-per - iot plat-forms - the cen-tral b
 ack-
@@ -863,7 +921,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--72
 / / iot-[]analytics . com /
  []
 
+<<<<<<< HEAD
 [36]
+=======
+
+>>>>>>> 1b50acd0a239236507af5de3601e71804a2790ef
 Underfull \hbox (badness 10000) in paragraph at lines 74--76
 []\OT1/cmr/m/n/10 Micro[]Research[]Finland[]Oy, Event gen-er-a-tor, []$\OT1/cmt
 t/m/n/10 http : / / www . mrf . fi /
@@ -889,6 +951,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 161--163
 ww . arduino . cc / en / Guide /
  []
 
+<<<<<<< HEAD
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1124.
  [38]
@@ -896,16 +959,34 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 1124.
  (./Test event generation for a fall-detection IoT system.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1124.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1124.
+=======
+[38])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1115.
+ [39]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1115.
+ (./Test event generation for a fall-detection IoT system.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1115.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1115.
+>>>>>>> 1b50acd0a239236507af5de3601e71804a2790ef
 
 Package rerunfilecheck Info: File `"Test event generation for a fall-detection 
 IoT system".out' has not changed.
 (rerunfilecheck)             Checksum: 47EC3EDFA8749649265488011D91221C;862.
+<<<<<<< HEAD
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1124.
  ) 
 Here is how much of TeX's memory you used:
  10324 strings out of 493029
  144256 string characters out of 6136233
  259489 words of memory out of 5000000
+=======
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1115.
+ ) 
+Here is how much of TeX's memory you used:
+ 10325 strings out of 493029
+ 144263 string characters out of 6136233
+ 260488 words of memory out of 5000000
+>>>>>>> 1b50acd0a239236507af5de3601e71804a2790ef
  13456 multiletter control sequences out of 15000+600000
  12077 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -927,10 +1008,18 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
 Output written on "Test event generation for a fall-detection IoT system.pdf" (
+<<<<<<< HEAD
 38 pages, 1713237 bytes).
 PDF statistics:
  689 PDF objects out of 1000 (max. 8388607)
  598 compressed objects within 6 object streams
  215 named destinations out of 1000 (max. 500000)
+=======
+39 pages, 1713009 bytes).
+PDF statistics:
+ 692 PDF objects out of 1000 (max. 8388607)
+ 600 compressed objects within 6 object streams
+ 216 named destinations out of 1000 (max. 500000)
+>>>>>>> 1b50acd0a239236507af5de3601e71804a2790ef
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

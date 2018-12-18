@@ -59,14 +59,14 @@ EsperTech, ``Espertech website,''
   \url{http://www.espertech.com/esper/index.php}, 2018.
 
 \bibitem{TesisGutierrez2017}
-L.~Gutiérrez-Madroñal, ``Generación automática de casos en procesamiento de
-  eventos con epl - authomatic generation of cases in event processing using
-  epl,'' Ph.D. dissertation, University of Cadiz, 2017.
+L.~Guti{\'e}rrez-Madro{\~n}al, ``Generaci{\'o}n autom{\'a}tica de casos en
+  procesamiento de eventos con epl - authomatic generation of cases in event
+  processing using epl,'' Ph.D. dissertation, University of Cadiz, 2017.
 
 \bibitem{Gutierrez2017}
-L.~Gutiérrez-Madroñal, I.~Medina-Bulo, and J.~Domínguez-Jiménez,
-  ``Iot–teg: Test event generator system,'' \emph{Journal of Systems and
-  Software}, 2017.
+L.~Guti{\'e}rrez-Madro{\~n}al, I.~Medina-Bulo, and
+  J.~Dom{\'i}nguez-Jim{\'e}nez, ``{IoT–TEG}: Test event generator system,''
+  \emph{Journal of Systems and Software}, 2017.
 
 \bibitem{dobbs2004houches}
 M.~A. Dobbs, S.~Frixione, E.~Laenen, K.~Tollefson, H.~Baer, E.~Boos, B.~Cox,
@@ -80,9 +80,12 @@ M.~L. Mangano and T.~J. Stelzer, ``Tools for the simulation of hard hadronic
   2005.
 
 \bibitem{Grzegorczyk}
+\BIBentryALTinterwordspacing
 K.~Grzegorczyk, V.~Baggiolini, and K.~Zieliński, ``Complex event processing
   approach to automated monitoring of particle accelerator and its control
-  system,'' vol.~15, 01 2014.
+  system,'' \emph{Computer Science}, vol.~15, no.~4, p. 351, 2014. [Online].
+  Available: \url{https://journals.agh.edu.pl/csci/article/view/1007}
+\BIBentrySTDinterwordspacing
 
 \bibitem{iot-analytics:2015}
 IoT-Analytics, ``White paper - iot platforms - the central backbone for the
@@ -117,14 +120,15 @@ H.~Gjoreski, A.~Rashkovska, S.~Kozina, M.~Lustrek, and M.~Gams, ``Telehealth
 
 \bibitem{Kozina}
 S.~Kozina, H.~Gjoreski, M.~Gams, and M.~Lu{\v{s}}trek, ``Efficient activity
-  recognition and fall detection using accelerometers,'' vol. 386, pp. 13--23.
+  recognition and fall detection using accelerometers,'' in \emph{International
+  Competition on Evaluating AAL Systems through Competitive
+  Benchmarking}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2013, pp.
+  13--23.
 
 \bibitem{Luder2009}
-M.~L{\"u}der, G.~Bieber, and R.~Salomon, ``Sturzerkennung mittels {L}uftdruck-
-  und {B}eschleunigungssensorik {A}ir {P}ressure- and {A}cceleration-{B}ased
-  {F}all {D}etector: 2. {D}eutscher {AAL}-{K}ongress mit {A}usstellung -
-  {T}echnologien, {A}nwendungen ; 27. - 28. {J}anuar 2009 in {B}erlin;
-  {T}agungsbandbeitr{\"a}ge,'' 2009.
+M.~L{\"u}der, G.~Bieber, and R.~Salomon, ``Sturzerkennung mittels
+  luftdruck--und beschleunigungssensorik,'' \emph{Ambient Assisted Living},
+  vol.~2, pp. 27--01, 2009.
 
 \bibitem{Etz10}
 O.~Etzion and P.~Niblett, \emph{Event Processing in Action}, 1st~ed.\hskip 1em
@@ -134,9 +138,10 @@ O.~Etzion and P.~Niblett, \emph{Event Processing in Action}, 1st~ed.\hskip 1em
 \bibitem{gutierrez2018}
 \BIBentryALTinterwordspacing
 L.~Guti{\'e}rrez-Madro{\~n}al, A.~Garc{\'i}a-Dom{\'i}nguez, and I.~Medina-Bulo,
-  ``Evolutionary mutation testing for iot with recorded and generated events,''
-  \emph{Software: Practice and Experience}, vol.~0, no.~0, 2018. [Online].
-  Available: \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.2629}
+  ``Evolutionary mutation testing for {I}o{T} with recorded and generated
+  events,'' \emph{Software: Practice and Experience}, vol.~0, no.~0, 2018.
+  [Online]. Available:
+  \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.2629}
 \BIBentrySTDinterwordspacing
 
 \bibitem{jia2011}
@@ -159,18 +164,19 @@ N.~Pannurat, S.~Thiemjarus, and E.~Nantajeewarawat, ``Automatic fall
   2014.
 
 \bibitem{FallRepo}
-L.~Gutiérrez-Madroñal, ``Github repository,''
+L.~Guti{\'e}rrez-Madro{\~n}al, ``Github repository,''
   \url{https://github.com/lorgut/FallDetectionData}, 2018.
 
 \bibitem{colladomachine}
 A.~Collado-Villaverde, M.~D. R-Moreno, D.~F. Barrero, and D.~Rodriguez,
   ``Machine learning approaches to detect elderly people falls using sound,''
-  vol. 10350, 2017.
+  \emph{Advances in Artificial Intelligence: From Theory to Practice}, vol.
+  10350, 2017.
 
 \bibitem{colladoTriaxal}
 A.~Collado~Villaverde, M.~R-Moreno, D.~Barrero, and D.~Rodriguez,
   \emph{Triaxial Accelerometer Located on the Wrist for Elderly People’s Fall
-  Detection}, 09 2016.
+  Detection}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, Cham, 09 2016.
 
 \bibitem{Arduino2018}
 Arduino, ``Arduino website,''

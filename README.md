@@ -1,1 +1,0 @@
-# IoTJ paper

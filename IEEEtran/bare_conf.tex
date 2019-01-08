@@ -448,7 +448,7 @@ of a five sensor nodes Body Area Network (BAN)~\cite{LaBlunda.2016,LaBlunda.2016
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[scale=0.15]{img/Figure1}
+  \includegraphics[scale=0.12]{img/Figure1}
   \caption[Escalation scheme]{Scheme fall simulation where a person has a wareable sensor network in form of a belt.~\cite{LaBlunda.2016,LaBlunda.2016b}}
   \label{fig:escalationscheme}
 \end{figure}
@@ -494,9 +494,9 @@ In this study of falls as relevant situations, our main contributions are:
 The rest of this paper is organised as follows. Section~\ref{sec:relatedwork}
 describes not only the related work of event generators, but also the existing
 solutions for fall-detection. Section~\ref{sec:background} provides the basic
-knowledge of falls, EPLs and IoT-TEG tool. The architecture
-of the fall detection system, the fall analysis and the IoT-TEG new functionality are 
-introduced in Section~\ref{sec:basicprototype}. Section~\ref{sec:improvedprototype}
+knowledge of falls and EPLs. A brief introduction of IoT-TEG and its new functionality
+appear in Section~\ref{iotteg}. The architecture of the fall detection system and the 
+fall analysis are introduced in Section~\ref{sec:basicprototype}. Section~\ref{sec:improvedprototype}
 describes the improvements on the prototype, a new fall type analysis,
 a comparison of the obtained results and some detected problems. Finally, in Section~\ref{sec:conclusions}, 
 we conclude our paper and make recommendations for future work.
@@ -584,7 +584,7 @@ magnitude which is illustrated in the Formula~\ref{eq:acel} was used for the fal
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[scale=0.6]{img/FallGraph}
+  \includegraphics[scale=0.5]{img/FallGraph}
   \caption[Acceleration during impact]{Acceleration during impact~\cite{Kozina}.}
   \label{fig:grafica}
 \end{figure}
@@ -599,7 +599,7 @@ in a 1 second window and $\alpha_{min}$ preceded $\alpha_{max}$; where $\alpha_{
 $\alpha_{min}$ is the minimum acceleration value and $1g\approx9.81m/s^{2}$. Looking at the rule an event is categorised as a fall when the 
 difference between $\alpha_{max}$ and $\alpha_{min}$ is greater than 1g and $\alpha_{min}$ is followed by $\alpha_{max}$. 
 Important: this should happen within a time window of 1 second due to the fact, that a fall can occur in less than 1 second~\cite{Luder2009}.
-To apply this rule we used the EPL of EsperTech~\cite{Esper:2016} to integrate it in an IoT system which detects falls.
+To apply this rule we used the EPL of EsperTech~\cite{Esper:2016} in an IoT system which detects falls.
 
 \subsection{Fall patterns with EPL of EsperTech}
 
@@ -628,8 +628,9 @@ In the above example (see Example~\ref{EPLqueries}) of a ``nuclear
 reactor control system'', its temperature gauges take a reading of the core temperature every second and send the data 
 to a central monitoring system. The EPL of EsperTech query throws a warning if we have 2 consecutive 
 temperatures above a certain threshold (400 degrees Celsius). This is a situation where a quick reaction to emerging patterns 
-is needed in a stream of data events. A quick reaction is also needed in fall detection. The pattern which 
-describes this situation will be shown in the corresponding section.
+is needed in a stream of data events. A quick reaction is also needed in fall detection. 
+% The pattern which 
+% describes this situation will be shown in the corresponding section.
  
 Because of the difficulties to simulate falls, IoT-TEG is used in
 order to get the fall-test events automatically. 
@@ -648,7 +649,7 @@ by IoT-TEG. The generator takes the definition and generates the indicated numbe
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[scale=0.5]{./img/IoT-EGArquitecture}
+  \includegraphics[scale=0.4]{./img/IoT-EGArquitecture}
   \caption[IoT-TEG Architecture]{IoT-TEG Architecture~\cite{TesisGutierrez2017,Gutierrez2017}.}
   \label{fig:IoT-EGArquitecture}
 \end{figure}
@@ -690,12 +691,10 @@ involved to simulate the behaviour, a fall, is 20.
 Variables can be defined if they are needed in the behaviour rules definition file. They can be defined using 
 the \texttt{\small{<variables>}} tags. To define them a name and a value 
 have to be given to the variables. The value can be defined as a fixed value with the \texttt{\small{value}} 
-property, or using a range with the \texttt{\small{min}} and \texttt{\small{max}} properties. Moreover, in some variables
-are involved in the value of another variables; this is indicated using the variable with an specific 
-format \texttt{\small{\$(variable)}}, see Example~\ref{FallRules}. In addition, arithmetic operations can be 
-done in the definition of the variable values. Let us see how using them in the fall example. To 
-define the acceleration behaviour during a fall one variable is defined: \texttt{\small{Base}}, that it will be 
-the acceleration of a person in a stationary position.
+property, or using a range with the \texttt{\small{min}} and \texttt{\small{max}} properties. For example, 
+\texttt{\small{Base}} variable is used to define the acceleration of a person in a stationary position.
+Some variables are involved in the value of another variables; this is indicated using the variable with an specific 
+format \texttt{\small{\$(variable)}}. In addition, arithmetic operations can be done in the definition of the variable values. 
 
 Once the variables are defined, the \texttt{\small{<rules>}} tags are used to define the acceleration behaviour in 
 Figure~\ref{fig:grafica}. A \texttt{\small{weight}} must be assigned to each behaviour rule to calculate the number 
@@ -706,7 +705,7 @@ a fall $20 * 0,25 = 5$ events will be generated for the first rule, another 5 ev
 \texttt{\small{weight="0"}} to indicate how the remained events have to be generated. 
 
 To define the rules, \texttt{\small{min}}, \texttt{\small{max}} and \texttt{\small{value}} properties can be used as well as the arithmetic 
-operations and the references to another variables. Moreover, the \texttt{\small{sequence}} property can be used to obtain
+operations and the references to another variables, see Example~\ref{FallRules}. Moreover, the \texttt{\small{sequence}} property can be used to obtain
 values lower or higher than the one generated previously. The \texttt{\small{sequence}} property values are \texttt{\small{inc}}, 
 to increase the value, or \texttt{\small{dec}}, to decrease the value; examples of their usage will be shown in the following
 sections.
@@ -764,36 +763,35 @@ data and is sent wirelessly to the coordinator using the ZigBee protocol. The da
  \end{center}
 \begin{itemize}
   \item $|\alpha| \rightarrow$ This value
-    represents the acceleration magnitude which is calculated  
-  by equation (\ref{eq:acel}), see Section~\ref{subsec:analysis}. This value is a reference for impact detection. 
-  The value's unit is m/s$^2$.
-  \item $\omega_{x}, \omega_{y}, \omega_{z} \rightarrow$ represent the angular velocity in X, Y and Z direction respectively. The value's unit is degree per second (dps).
+    represents the acceleration magnitude which is calculated by Formula (\ref{eq:acel}). 
+    This value is a reference for impact detection. The unit measure is m/s$^2$.
+  \item $\omega_{x}, \omega_{y}, \omega_{z} \rightarrow$ represent the angular velocity in X, Y and Z direction respectively. The unit measure is degree per second (dps).
 \end{itemize}
 The coordinator receives the incoming data and it has the function to evaluate the patient's status.
 
-The proposed positioning of sensors in the belt architecture was
-designed mainly for two reasons. The first reason  
-reflects the requirement of a safety critical system to which the
-fall-detection prototype belongs. The reliability  
-of the system must be ensured, in case one of the nodes fails. Using
-the architecture shown above (see Figure \ref{fig:belt}),  
-a mirroring of the opposing sensors is achieved with identical sensor values, only with different signs. 
-In case a node fails, the opposite value can be taken as a reference to detect a possible fall. The other reason for 
-applying the proposed architecture is that it significantly improves
-the accuracy of our system compared to earlier designs \cite{LuigiMasterThesis}. Taking into 
-consideration the following illustration (see Figure \ref{fig:axisreference}) the proposed belt architecture facilitates the recognition of several fall-types.
-
-\begin{figure}[!ht]
-  \centering
-  \includegraphics[scale=0.2]{./img/axis}
-  \caption[Three axis reference draft]{Three axis reference draft \cite{LaBlunda.2016b,LuigiMasterThesis}}
-  \label{fig:axisreference}
-\end{figure}
-
-The special positioning of the nodes on the belt results in a more precise fall-characterisation. Considering 
-the event that a person does a left rotation and suffers a frontal impact to the ground (forward fall), 
-the gyroscope information (single values $\omega_{i}, i \in \{x,y,z\}$) could be used for the detection of rotation and the 
-acceleration magnitude $|\alpha|$ to detect the impact to the ground, see Equation (\ref{eq:acel}), Section~\ref{subsec:analysis}.
+% The proposed positioning of sensors in the belt architecture was
+% designed mainly for two reasons. The first reason  
+% reflects the requirement of a safety critical system to which the
+% fall-detection prototype belongs. The reliability  
+% of the system must be ensured, in case one of the nodes fails. Using
+% the architecture shown above (see Figure \ref{fig:belt}),  
+% a mirroring of the opposing sensors is achieved with identical sensor values, only with different signs. 
+% In case a node fails, the opposite value can be taken as a reference to detect a possible fall. The other reason for 
+% applying the proposed architecture is that it significantly improves
+% the accuracy of our system compared to earlier designs \cite{LuigiMasterThesis}. Taking into 
+% consideration the following illustration (see Figure \ref{fig:axisreference}) the proposed belt architecture facilitates the recognition of several fall-types.
+% 
+% \begin{figure}[!ht]
+%   \centering
+%   \includegraphics[scale=0.2]{./img/axis}
+%   \caption[Three axis reference draft]{Three axis reference draft \cite{LaBlunda.2016b,LuigiMasterThesis}}
+%   \label{fig:axisreference}
+% \end{figure}
+% 
+% The special positioning of the nodes on the belt results in a more precise fall-characterisation. Considering 
+% the event that a person does a left rotation and suffers a frontal impact to the ground (forward fall), 
+% the gyroscope information (single values $\omega_{i}, i \in \{x,y,z\}$) could be used for the detection of rotation and the 
+% acceleration magnitude $|\alpha|$ to detect the impact to the ground, see Equation (\ref{eq:acel}), Section~\ref{subsec:analysis}.
 
 To test the system's accuracy different fall-types were reproduced with several test people. A 
 test procedure based on Li et al.~\cite{Li2009} and Pannurat et al.~\cite{Pannurat2014} was developed which includes 
@@ -844,7 +842,7 @@ to the same person.
 Our goal is to study the acceleration behaviour during a fall in order to generate test events. The selected fall consists on rolling in the bed and fall (RBF)~\cite{Li2009,Pannurat2014}. In this study we have used a 
 healthy subject, and we have recorded falls with all possible realism while also
 trying to avoid risks. The person has been doing RBF type falls for a period of 2 minutes. The analysed 
-data and videos can be found in ~\cite{FallRepo}. In the following lines the steps to simulate 
+data and videos can be found in~\cite{FallRepo}. In the following lines the steps to simulate 
 the fall with the generated events are described, theses steps are very similar to the 
 ones followed by~\cite{colladomachine,colladoTriaxal}:
 

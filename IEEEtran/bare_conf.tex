@@ -797,7 +797,7 @@ To test the system's accuracy different fall-types were reproduced with several 
 test procedure based on Li et al.~\cite{Li2009} and Pannurat et al.~\cite{Pannurat2014} was developed which includes 
 several motions and fall-types which are typical in nursing homes and hospitals.
 
-Taking into account the architecture of the prototype and the rule to define a fall, see Equation (\ref{eq:acel}), 
+Taking into account the architecture of the prototype and the rule to define a fall, see Formula (\ref{eq:acel}), 
 the EPL of EsperTech pattern to define the fall situation is the one shown in the Example~\ref{FallPattern}.
 
 \begin{lstlisting}[basicstyle=\ttfamily\scriptsize,language=SQL,caption=Fall pattern,label=FallPattern]
@@ -864,8 +864,8 @@ sensor pressure because of an impact or the person is laying over it, etc.
 \end{figure}
 
 \subsubsection*{2. Fall identification and analysis} After the previous study, the peaks of the acceleration are identified. 
-These peaks, or maximum values, are when the sensor suffers the
-impact. Because of the mentioned noise, two ranges of the obtained 
+These peaks, or maximum values, are when the sensor suffers the impact. We have considered a peak when the normalised acceleration is 
+greater than 0,7 ($N(m/s^2) > 0,7$). Because of the mentioned noise, two ranges of the obtained 
 values are extracted in order to analyse data properly. Please, see the highlighted parts in Figure~\ref{fig:Sensor1Sombras};
 with respect to the X-axis $[210, 360]$ (Fall 1) and $[900, 1050]$ (Fall 2). The range of extracted values are a set of data that 
 happen in less than a time window of 1 second, to meet the fact described in~\cite{Luder2009}. So as to compare both RBF falls
@@ -888,8 +888,7 @@ the first column of the Table. The second column shows the acceleration values (
 are deployed in the third column ($N(m/s^2)$) according to the fall maximum value. In 
 Figure~\ref{fig:Sensor1} a comparison of the normalised acceleration behaviour during the previous RBF falls is shown. 
 This comparison shows a similar behaviour of the acceleration during the RBF falls.
-Moreover, the acceleration in these two RBF falls follow the rule that define a fall, see Equation (\ref{eq:caida}), 
-see Section~\ref{subsec:analysis}.
+Moreover, the acceleration in these two RBF falls follow the rule that define a fall, see Formula (\ref{eq:caida}).
 
 \begin{figure}[!ht]
   \centering
@@ -932,7 +931,9 @@ and a2.accelS1 = a4.accelS1 / 2 $\pm$ 0.5) where
 timer:within(1sec))]
 \end{lstlisting}
 
-The displayed EPL query depicts a recognition pattern which could be used to detect the rolling out of bed. Given that all the sensors are following the same pattern, one sensor node (S1) was used to create the query which makes it easier to understand the pattern. With the \textit{select} statement the event properties are selected to create a fall-detection pattern.
+The displayed EPL query depicts a pattern which follows the mentioned rules and could be used to detect the rolling out of bed. 
+Given that all the sensors are following the same pattern, one sensor node (S1) was used to create the query which makes it easier to understand it. 
+%With the \textit{select} statement the event properties are selected to create a fall-detection pattern.
 % In the given query the following event properties are selected:
 % \begin{itemize}
 %   \item \texttt{\small{a1.accelS1}}: starting acceleration value for stationary position (e.g. laying).
@@ -940,8 +941,8 @@ The displayed EPL query depicts a recognition pattern which could be used to det
 %   \item \texttt{\small{a1.accelS3}}: subsequent acceleration value for free fall event.
 %   \item \texttt{\small{a1.accelS4}}: subsequent acceleration value for impact detection.
 % \end{itemize}
-
-Taking into consideration that the RBF fall is a complex event to detect, this event has been divided in the following phases: stationary phase (e.g. laying), rolling phase, free fall phase and impact phase.
+% 
+% Taking into consideration that the RBF fall is a complex event to detect, this event has been divided in the following phases: stationary phase (e.g. laying), rolling phase, free fall phase and impact phase.
 
 The EPL query first checks if the starting acceleration \texttt{\small{a1.accelS1}} is $<=$ 9.81m/$s^2$ which means that the person is laying 
 on the bed (stationary position). Additionally, the subsequent property is checked. If the difference between the successive 
@@ -996,7 +997,7 @@ It has to be emphasised that to obtain these rules for the definition
 of the acceleration behaviour several tests
 have been done. Once we obtained the desired results, test events were generated as they were necessary. The 
 Figure~\ref{fig:IoTTEGRBFGeneratedEvents} shows the acceleration values of some of the generated RBF falls using
-IoT-TEG and the new functionality.
+IoT-TEG and the new functionality. These generated events can be used to test the fall detection system.
 
 \begin{figure}[!ht]
   \centering
@@ -1005,18 +1006,15 @@ IoT-TEG and the new functionality.
   \label{fig:IoTTEGRBFGeneratedEvents}
 \end{figure}
 
-The generated events which simulate RBF falls follow the pattern of the acceleration during a RBF fall.
-So, these generated events can be used to test the fall detection system.
-
 \section{Improved prototype}
 \label{sec:improvedprototype}
 
 \subsection{Architecture}
 \label{sub:improvedprototypearchitecture}
 
-Taking into consideration the architecture of the prototype described in the previous 
-section significant improvements were done. The improved hardware architecture is also 
-based on four sensor nodes (S1-S4), but with the following significant innovations:
+Taking into consideration the architecture of the prototype described in Section~\ref{sec:basicprototype} 
+significant improvements were done. The improved hardware architecture is also 
+based on four sensor nodes, but with the following significant innovations:
 
 \begin{itemize}
  \item A new hardware platform which is based on Arduino Primo Core~\cite{Arduino2018}: 
@@ -1033,13 +1031,13 @@ based on four sensor nodes (S1-S4), but with the following significant innovatio
  \item The improved prototype is using BLE for wireless data transmission. Using BLE 
  brings the advantage to build up a communication infrastructure with the smartphone 
  to automatically inform the emergency services without any additional hardware.
- \item The dataset which is sent by the sensor nodes (S1- S4) is composed as follows 
+ \item The dataset which is sent by the sensor nodes is composed as follows 
  and includes the values of $\alpha_{i}, i \in {x,y,z}$ in unit $m/s^{2}$:
  \begin{center}
   \texttt{\small{SensorID, X-Acceleration, Y-Acceleration, Z-Acceleration}}
  \end{center}
- Compared to the dataset format of the previous prototype the sensor identification 
- number was added and the significantly change is that only the single axis values of 
+ Compared to the dataset format of the previous prototype, the sensor identification 
+ number was added, and the significantly change is that only the single axis values of 
  the accelerometer are sent. Based on the individual axis values of the accelerometer, 
  the orientation of the person can also be determined. 
 %  Assuming the person is in a standing 
@@ -1062,19 +1060,17 @@ of 2 minutes, the FAW fall type. The analysed data and videos can be found in ~\
 In this analysis the same steps that the ones described in Section~\ref{sec:basicprototype} 
 have been done:
 
-\subsubsection*{Study of the values} Given that the sensor 1 is the one that suffers the 
-impact, its acceleration values $|\alpha|$ are the first to be
-analysed. The acceleration values $|\alpha|$ have 
-been normalised ($N(m/s^2)$). After the normalisation the impacts of the falls, peaks, 
-have to be detected; we have considered a peak when the normalised acceleration is 
-greater than 0,7 ($N(m/s^2) > 0,7$). After applying the previous rule in all the fall data 
+\subsubsection*{1. Study of the values} Given that the sensor 1 is the one that suffers the 
+impact, its acceleration values are the first to be
+analysed. The acceleration values are normalised ($N(m/s^2)$) and the impacts of the falls,
+peaks are detected ($N(m/s^2) > 0,7$). After applying the previous rule in all the fall data 
 and taking into account the alterations because the mentioned factors, the impacts are detected.
 
-\subsubsection*{Fall identification and analysis} Once the peaks are detected, a range of values, 
+\subsubsection*{2. Fall identification and analysis} Once the peaks are detected, a range of values, 
 including the peaks, are selected in order to analyse data properly and to study the acceleration 
 behaviour during FAW fall. The range of extracted values are a set of data that happen in less 
 than a time window of 1 second, to meet the fall rule of~\cite{Luder2009} described in 
-Equation (\ref{eq:caida}), see Section~\ref{subsec:analysis}. The Table~\ref{tabla:FAW} shows the 
+Formula (\ref{eq:caida}). The Table~\ref{tabla:FAW} shows the 
 acceleration value during one FAW fall of person 1 and person 2. 
 
 \begin{table}[!ht]
@@ -1089,10 +1085,10 @@ acceleration value during one FAW fall of person 1 and person 2.
 The first and fourth columns of the Table~\ref{tabla:FAW} represent
 the seconds ($s$) and milliseconds 
 ($ms$) when the acceleration was measured. The second and fifth columns show the acceleration 
-values $|\alpha|$  ($m/s^2$) and in the third and sixth columns are deployed the normalised acceleration values 
+values  ($m/s^2$) and in the third and sixth columns are deployed the normalised acceleration values 
 ($N(m/s^2)$) according to the fall maximum value. In Figure~\ref{fig:FAWcomparison} a comparison 
 of the normalised acceleration behaviour during the previous FAW falls of person 1 and person 2 is 
-shown. These comparisons show a similar behaviour of the acceleration during the FAW fall.
+shown. These comparisons show a similar behaviour of the acceleration during the fall.
 
 \begin{figure}[!ht]
   \centering
@@ -1148,7 +1144,7 @@ where timer:within(1sec))]
 %   \item \texttt{\small{a5.accelS1}}: subsequent acceleration value for impact to the ground.
 % \end{itemize}
 
-This event has been divided in the following phases: dynamic phase (e.g. walking), free fall to wall phase, wall impact phase, free fall phase and impact phase.
+% This event has been divided in the following phases: dynamic phase (e.g. walking), free fall to wall phase, wall impact phase, free fall phase and impact phase.
 
 The EPL query checks if the starting acceleration \texttt{\small{a1.accelS1}} is $>=$ 9.81 m/$s^2$ which means that the person is walking. 
 The next acceleration value (\texttt{\small{a2.accelS1}}) is used to detect the free fall phase to the wall. If \texttt{\small{a2.accelS1}} 
@@ -1160,9 +1156,9 @@ the ground. If the difference between the successive value (\texttt{\small{a5.ac
 is $>=$ 9.81 m/$s^2$ it means that the person has suffered an impact to the ground. To classify this event as 
 a FAW fall this pattern flow should happen within a time window of 1 second.
 
-\subsubsection*{To define the fall event} Once the fall acceleration behaviour has been observed, the next step is to define the 
+\subsubsection*{3. To define the fall event} Once the fall acceleration behaviour has been observed, the next step is to define the 
 fall event in order to generate test events with IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017}. Given that the involved event 
-attribute in this fall is the acceleration, the Example~\ref{FallEvent} in Section~\ref{sec:basicprototype} can be used to define 
+attribute in this fall is the acceleration, the Example~\ref{FallEvent} can be used to define 
 the fall event (FallEventType). The rules to define the behaviour of the acceleration in this type of fall is shown in 
 Example~\ref{FAWFallRules}.
 
@@ -1197,13 +1193,12 @@ that analysis. The acceleration value in a stationary position is a variable dep
 we have considered the established value, $1g\approx9.81m/s^{2}$. That is the fixed value of the 
 \texttt{\small{Base}} variable. To determine the values of the impacts, we have taken into account that the 
 normalised value have to be $> 0,7$. So, to ensure that the impacts, \texttt{\small{ImpactWall}} and 
-\texttt{\small{Impact}}, have a value meeting the mentioned condition the minimum value of the impact is the 
-sum of the \texttt{\small{Base}} and \texttt{\small{Base}} multiplied by \texttt{\small{Base}}$*0,7$; and the maximum value of the
+\texttt{\small{Impact}}, have a value meeting the mentioned condition the minimum value of the impact is  
+\texttt{\small{Base}}$+$\texttt{\small{Base}}$*0,7$; and the maximum value of the
 impacts is $3g\approx9,81*3=$\texttt{\small{Base}}$*3$.
 
 Given that we have considered to define the FAW fall behaviour
-rules according to the normalised values, the values to generate depend on the maximum value. Due to there are two 
-values that can be the highest one, \texttt{\small{ImpactWall}} or \texttt{\small{Impact}}, the rules that depend on the maximum 
+rules according to the normalised values, the values to generate depend on the maximum value. Due to there are two values that can be the highest one, \texttt{\small{ImpactWall}} or \texttt{\small{Impact}}, the rules that depend on the maximum 
 value contain the reference to the value, \texttt{\small{ImpactWall}} or \texttt{\small{Impact}}, according to the proximity
 of the rule. For instance, the first and second FAW fall rules contain a reference to \texttt{\small{ImpactWall}}, the impact 
 in the wall (third rule), which happens after the person is walking, something described in the first and the second rules.
@@ -1221,9 +1216,6 @@ IoT-TEG and the new functionality.
   \caption[IoT-TEG generated FAW falls]{IoT-TEG generated FAW falls.}
   \label{fig:IoTTEGFAWGeneratedEvents}
 \end{figure}
-
-The generated events which simulate FAW falls follow the pattern of the acceleration during a FAW fall.
-So, these generated events can be used to test the fall-detection system.
 
 The improvements in the new prototype are encouraging. They affect not only in the way of obtaining the data, but 
 also in the format and their values. The impact values from one analysis to the other are quite different, 
@@ -1302,7 +1294,7 @@ falls and does not stand up this means that maybe the person is unconscious or i
 services. Therefore, waiting at least 2 seconds between falls in our test scenarios, it will help not only to understand 
 better the behaviour of the acceleration values but also to do a better fall-simulation.
 
-Comparing the measured values of the fall-events (forward fall, fall against wall and rolling out of bed) of the two 
+Comparing the measured values of the fall-events of the two 
 prototypes, it can be determined that the measured impact values of the first prototype are considerably higher than 
 those of the improved solution. This difference is caused by multiple reasons. The main reason is the different 
 experimental set-up of the first prototype and the improved solution. The hardware design of the first prototype is 
@@ -1318,21 +1310,22 @@ we are able to compare fall-types.
 \section{Conclusions and Future Work}
 \label{sec:conclusions}
 
-The generated events using IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017} follow the behaviour of the analysed falls: 
-RBF and FAW. The implemented functionality 
+We have ilustrated part of the process of the development of an IoT system to detect falls. This process
+involves different types of testing, we have been using IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017}
+to generate the test events in order to replicate the behaviour of the sample falls. The implemented functionality 
 allows to generate events by defining rules which describe a desired behaviour. We can assign behaviour rules as many 
 event attributes as the event type contains, and the values of each event attribute will follow the assigned behaviour.
 The introduced functionality of IoT-TEG is able to adapt to the behaviour of the analysed event attribute, because
 it was developed as a tool to generate test events for any system
 which manages events and needs to be tested.
 
-According to the falls, we have detected the necessity to define the
+According to the falls, RBF and FAW, we have detected the necessity to define the
 EPL query for each fall-type in the literature; this will
 help to identify a fall from a no-fall. Moreover, it will be
 interesting to add different types of sensors such as an air 
 pressure sensor, and medical data such as ECG, in order to identify and characterise the falls.
 
-The main future work is to improve the IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017} tool in order to generate faithful 
+The future work related to IoT-TEG~\cite{TesisGutierrez2017,Gutierrez2017} is to improve the tool in order to generate faithful 
 test events which simulate the 
 relevant situations that need to be filtered and, sometimes, are very difficult to imitate: adverse environment conditions, 
 rise or fall in blood pressure, heart attack, falls... IoT-TEG is a
@@ -1340,12 +1333,12 @@ tool under development, so more functionalities will be added
 to cover the test necessities. In order to improve IoT-TEG, more real events will be analysed which let us know 
 the real situations and behaviour of the events.
 
-The introduced IoT-TEG functionality will be improved with a new property. This property will allow to generate values 
-which follow behaviour rules but depends from another event attribute value. IoT-TEG has the option
-to generate dependent values thanks to the \texttt{\small{dependence}} property. This property generates the event attribute value 
-according to a fixed value; so we will extend the tool with the option to define a dependence rule between event attributes. 
+% The introduced IoT-TEG functionality will be improved with a new property. This property will allow to generate values 
+% which follow behaviour rules but depends from another event attribute value. IoT-TEG has the option
+% to generate dependent values thanks to the \texttt{\small{dependence}} property. This property generates the event attribute value 
+% according to a fixed value; so we will extend the tool with the option to define a dependence rule between event attributes. 
 
-To generate test events, reliable data transmission of all four sensor nodes (S1-S4) must be guaranteed. As described in 
+To generate test events, reliable data transmission of all four sensor nodes must be guaranteed. As described in 
 the Section~\ref{sub:detectedproblems} the synchronisation problem can
 lead to data loss during data transmission and  
 thus influences the analysis of falls (see Table

@@ -399,7 +399,7 @@ Email: \{l.lablunda, mfwagner\}@fb2.fra-uas.de}}
 % in the abstract
 \begin{abstract}
 The Internet of Things (IoT) is a popular paradigm which has been applied to different areas 
-such as smart cities, medicine or business processes. One of the main drawbacks of an IoT system is the 
+such as smart cities, medicine, e.g. a fall-detection IoT system, or business processes. One of the main drawbacks of an IoT system is the 
 amount of information it has to manage and to monitor. This information arrives as events that need 
 to be processed in real time in order to make correct decisions. The Event Processing Languages (EPLs) were 
 designed to handle this information by defining event patterns which describe relevant situations to be 
@@ -530,7 +530,7 @@ to be classified as a full IoT platform. Examples are given in the following lin
 \end{itemize}
 
 Talking about fall-detection, there are several solutions that propose wearable sensors.
-We are going to focus our attention in the approach proposed by Li et al.~\cite{Li2009}; their wearable fall-detection solutions,
+We are going to focus our attention on the approach proposed by Li et al.~\cite{Li2009}; their wearable fall-detection solutions,
 which will be explained subsequently, was used for the development of our prototype. They introduce a fall-detection method based on a BAN that consists 
 of two wearable sensor nodes. These two nodes comprise an accelerometer and gyroscope and are worn on the chest, node A, and thigh 
 node B, (see Figure~\ref{fig:simulation}). The principle of this method differentiates between static postures and dynamic postures: 
@@ -563,7 +563,7 @@ as follows:
  seconds are used to analyse it. In the case that this position was unintentional, the system classifies it as a fall. 
 \end{enumerate}
 
-The weak point of this method is the differentiation between jumping into bed and falling against a wall with seated posture.
+The weak point of this method is the differentiation between the activity \textit{jumping into bed} and the fall type \terxtit{falling against a wall with seated posture}.
 
 \section{Background}
 \label{sec:background}
@@ -1150,7 +1150,7 @@ The EPL query checks if the starting acceleration \texttt{\small{a1.accelS1}} is
 The next acceleration value (\texttt{\small{a2.accelS1}}) is used to detect the free fall phase to the wall. If \texttt{\small{a2.accelS1}} 
 is $<$ 9.81 m/$s^2$ it indicates that the person is falling against the fall. Additionally, if the difference between 
 the current acceleration value (\texttt{\small{a3.accelS1}}) and the previous acceleration value (\texttt{\small{a2.accelS1}}) is $>=$ 9.81 m/$s^2$ 
-it indicates the impact against a wall. After that, the person suffered the impact against a wall the upcoming 
+it indicates the impact against a wall. After that, the person suffered the impact against a wall, the upcoming 
 acceleration value (\texttt{\small{a4.accelS1}}) should be less than 9.81 m/$s^2$. This indicates that the person is falling to 
 the ground. If the difference between the successive value (\texttt{\small{a5.accelS1}}) and the previous value (\texttt{\small{a4.accelS1}}) 
 is $>=$ 9.81 m/$s^2$ it means that the person has suffered an impact to the ground. To classify this event as 
@@ -1198,7 +1198,7 @@ normalised value have to be $> 0,7$. So, to ensure that the impacts, \texttt{\sm
 impacts is $3g\approx9,81*3=$\texttt{\small{Base}}$*3$.
 
 Given that we have considered to define the FAW fall behaviour
-rules according to the normalised values, the values to generate depend on the maximum value. Due to there are two values that can be the highest one, \texttt{\small{ImpactWall}} or \texttt{\small{Impact}}, the rules that depend on the maximum 
+rules according to the normalised values, the values to be generated depend on the maximum value. Due to this fact there are two values that can be the highest one, \texttt{\small{ImpactWall}} or \texttt{\small{Impact}}, the rules that depend on the maximum 
 value contain the reference to the value, \texttt{\small{ImpactWall}} or \texttt{\small{Impact}}, according to the proximity
 of the rule. For instance, the first and second FAW fall rules contain a reference to \texttt{\small{ImpactWall}}, the impact 
 in the wall (third rule), which happens after the person is walking, something described in the first and the second rules.
@@ -1219,7 +1219,7 @@ IoT-TEG and the new functionality.
 
 The improvements in the new prototype are encouraging. They affect not only in the way of obtaining the data, but 
 also in the format and their values. The impact values from one analysis to the other are quite different, 
-this is because several reasons that are described in Section~\ref{sub:detectedproblems}. The difference
+this is because of several reasons described in Section~\ref{sub:detectedproblems}. The difference
 of values was not a problem for IoT-TEG to define the behaviour rules and to generate the test events. That
 means that the introduced functionality can be adapted to the analysed
 behaviour. Moreover, it has to be emphasised that the application of the new functionality covers any event attribute which follows a behaviour;
@@ -1240,7 +1240,7 @@ First of all, we are going to explain the problems related to the prototype:
    Table~\ref{tabla:Synchro} will be used to explain the problem. Let
    us say  
  that in ``fall 1'', there are more than 30 values that define the fall, and later in ``fall 3'', there are 
- 12 values that define the fall. So, in order to analyse the falls and compare the acceleration behaviour, it is 
+ 12 values that define the fall. This is related to the synchronisation problem. So, in order to analyse the falls and compare the acceleration behaviour, it is 
  difficult to work with that information. A comparison of two FAW falls with the synchronisation problem is shown
  in Figure~\ref{fig:synchronisation1}; the sensor 1 acceleration values for the first FAW fall are coloured in blue and the
  sensor 1 acceleration values for the second FAW fall are coloured in red. The first fall is one fall from the beginning
@@ -1354,7 +1354,7 @@ After studying the work of J{\"a}ms{\"a} et al.~\cite{jamsa2014fall}
 we are going to include in our future work the analysis of 
 the different postures after the fall. 
 
-Fall-detection systems are safety critical. Therefore, new developments will include hazard analysis methods
+Fall-detection systems are safety critical. Therefore, new developments will include hazard analysis methods, e.g. STAMP/STPA, 
 to satisfy safety standards, i.e. IEC61508, IEC60601, etc.
 
 \section*{Acknowledgment}
